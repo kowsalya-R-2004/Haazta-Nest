@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#7E22CE"/>
+  <!-- 3-Piece Stylized House Shards -->
+  <g fill="#FFFFFF" transform="translate(4, 2) scale(0.56)">
+    <path d="M51 12.5C49.5 10.5 46.5 10.5 45 12.5L25 29C23.5 30.2 23 32.2 23.8 34C24.5 35.8 26.2 37 28.2 37H46.5C48.5 37 50.2 35.5 50.8 33.5L53.2 24.5C53.8 22.2 53 19.8 51.5 18L51 12.5Z" />
+    <path d="M21 42C19.3 42 18 43.3 18 45V64C18 67.3 20.7 70 24 70H44C46.2 70 48 68.2 48 66V47C48 44.5 45.8 42.8 43.5 43.2C38 44.2 31 44.5 24 42.4C23 42.1 22 42 21 42Z" />
+    <path d="M56 16.5C54.8 17.8 54.2 19.5 54.5 21.2L57.5 46C57.8 48.5 56.5 51 54.8 53L53.5 54.5C52.2 56 52 58 52.8 59.8L55 64C56 66 58 67.2 60.2 67.2H74C77.3 67.2 80 64.5 80 61.2V32C80 30.2 79.2 28.5 77.8 27.2L62 13.8C59.8 12 57.2 13.8 56 16.5Z" />
+  </g>
+  <text x="32" y="55" fill="#FFFFFF" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-style="italic" font-size="14" letter-spacing="-0.3">Nest</text>
+</svg>
