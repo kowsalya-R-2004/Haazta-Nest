@@ -31,16 +31,176 @@ export const CITIES_DATA: CityData[] = [
       or: 'ବେଙ୍ଗାଲୁରୁ'
     },
     localities: [
-      { id: 'Bellandur', en: 'Bellandur', translations: { hi: 'बेलंदूर', kn: 'ಬೆಳ್ಳಂದೂರು', te: 'బెల్లందూరు', ta: 'பெல்லந்தூர்', mr: 'बेलंदूर' } },
-      { id: 'HSR Layout', en: 'HSR Layout', translations: { hi: 'एचएसआर लेआउट', kn: 'ಹೆಚ್.ಎಸ್.ಆರ್ ಲೇಔಟ್', te: 'హెచ్ఎస్ఆర్ లేఅవుట్', ta: 'எச்எஸ்ஆர் லேஅவுட்', mr: 'एचएसआर लेआउट' } },
-      { id: 'Koramangala', en: 'Koramangala', translations: { hi: 'कोरमंगला', kn: 'ಕೋರಮಂಗಲ', te: 'కోరమంగళ', ta: 'கோரமங்களா', mr: 'कोरमंगला' } },
-      { id: 'Indiranagar', en: 'Indiranagar', translations: { hi: 'इंदिरानगर', kn: 'ಇಂದಿರಾನಗರ', te: 'ఇందిరానగర్', ta: 'இந்திரா நகர்', mr: 'इंदिरानगर' } },
-      { id: 'Whitefield', en: 'Whitefield', translations: { hi: 'व्हाइटफील्ड', kn: 'ವೈಟ್‌ಫೀಲ್ಡ್', te: 'వైట్‌ఫీల్ಡ್', ta: 'ஒயிட்பீல்ட்', mr: 'व्हाइटफील्ड' } },
-      { id: 'Marathahalli', en: 'Marathahalli', translations: { hi: 'मराठाहल्ली', kn: 'ಮಾರತಹಳ್ಳಿ', te: 'మారతಹల్లి', ta: 'மாரத்தஹள்ளி', mr: 'मराठाहल्ली' } },
-      { id: 'Electronic City', en: 'Electronic City', translations: { hi: 'इलेक्ट्रॉनिक सिटी', kn: 'ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ', te: 'ఎలక్ట్రానిక్ సిటీ', ta: 'எலக்ட்ரானிக் சிட்டி', mr: 'इलेक्ट्रॉनिक सिटी' } },
-      { id: 'Hebbal', en: 'Hebbal', translations: { hi: 'हेब्बाल', kn: 'ಹೆಬ್ಬಾಳ', te: 'హెబ్బాల్', ta: 'ஹெப்பால்', mr: 'हेब्बाल' } },
-      { id: 'Jayanagar', en: 'Jayanagar', translations: { hi: 'जयनगर', kn: 'ಜಯನಗರ', te: 'జయనగర్', ta: 'ஜெயநகர்', mr: 'जयनगर' } },
-      { id: 'BTM Layout', en: 'BTM Layout', translations: { hi: 'बीटीएम लेआउट', kn: 'ಬಿಟಿಎಂ ಲೇಔಟ್', te: 'బిటిఎం లేఅవుట్', ta: 'பிடிஎம் ಲೇஅவுட்', mr: 'बीटीएम लेआउट' } }
+      {
+        id: 'Bellandur',
+        en: 'Bellandur',
+        translations: {
+          hi: 'बेलंदूर',
+          kn: 'ಬೆಳ್ಳಂದೂರು',
+          te: 'బెల్లందూరు',
+          ta: 'பெல்லந்தூர்',
+          mr: 'बेलंदूर',
+          bn: 'বেল্লান্দুর',
+          gu: 'બેલંદુર',
+          ml: 'ബെല്ലന്തൂർ',
+          pa: 'ਬੇਲੰਦੂਰ',
+          as: 'বেল্লান্দুৰ',
+          or: 'ବେଲାନ୍ଦୁର'
+        }
+      },
+      {
+        id: 'HSR Layout',
+        en: 'HSR Layout',
+        translations: {
+          hi: 'एचएसआर लेआउट',
+          kn: 'ಹೆಚ್.ಎಸ್.ಆರ್ ಲೇಔಟ್',
+          te: 'హెచ్ఎస్ఆర్ లేఅవుట్',
+          ta: 'எச்எஸ்ஆர் லேஅவுட்',
+          mr: 'एचएसआर लेआउट',
+          bn: 'এইচএসআর লেআউট',
+          gu: 'એચએસઆર લેઆઉટ',
+          ml: 'എച്ച്.എസ്.ആർ ലേഔട്ട്',
+          pa: 'ਐਚਐਸਆਰ ਲੇਆਉਟ',
+          as: 'এইচএছআৰ লেআউট',
+          or: 'ଏଚଏସଆର ଲେଆଉଟ'
+        }
+      },
+      {
+        id: 'Koramangala',
+        en: 'Koramangala',
+        translations: {
+          hi: 'कोरमंगला',
+          kn: 'ಕೋರಮಂಗಲ',
+          te: 'కోరమంగళ',
+          ta: 'கோரமங்களா',
+          mr: 'कोरमंगला',
+          bn: 'কোরামঙ্গলা',
+          gu: 'કોરમંગલા',
+          ml: 'കോരമംഗല',
+          pa: 'ਕੋਰਮੰਗਲਾ',
+          as: 'কোৰমংগলা',
+          or: 'କୋରମଙ୍ଗଳା'
+        }
+      },
+      {
+        id: 'Indiranagar',
+        en: 'Indiranagar',
+        translations: {
+          hi: 'इंदिरानगर',
+          kn: 'ಇಂದಿರಾನಗರ',
+          te: 'ఇందిరానగర్',
+          ta: 'இந்திரா நகர்',
+          mr: 'इंदिरानगर',
+          bn: 'ইন্দিরানগর',
+          gu: 'ઇન્દિરાનગર',
+          ml: 'ഇന്ദിരാനഗർ',
+          pa: 'ਇੰਦਰਾ ਨਗਰ',
+          as: 'ইন্দিৰানগৰ',
+          or: 'ଇନ୍ଦିରାନଗର'
+        }
+      },
+      {
+        id: 'Whitefield',
+        en: 'Whitefield',
+        translations: {
+          hi: 'व्हाइटफील्ड',
+          kn: 'ವೈಟ್‌ಫೀಲ್ಡ್',
+          te: 'వైట్‌ఫీల్డ్',
+          ta: 'ஒயிட்பீல்ட்',
+          mr: 'व्हाइटफील्ड',
+          bn: 'হোয়াইটফিল্ড',
+          gu: 'વ્હાઇટફીલ્ડ',
+          ml: 'വൈറ്റ്ഫീൽഡ്',
+          pa: 'ਵ੍ਹਾਈਟਫੀਲਡ',
+          as: 'হোৱাইটফিল্ড',
+          or: 'ହ୍ୱାଇଟଫିଲ୍ଡ'
+        }
+      },
+      {
+        id: 'Marathahalli',
+        en: 'Marathahalli',
+        translations: {
+          hi: 'मराठाहल्ली',
+          kn: 'ಮಾರತಹಳ್ಳಿ',
+          te: 'మారతహల్లి',
+          ta: 'மாரத்தஹள்ளி',
+          mr: 'मराठाहल्ली',
+          bn: 'মারাঠাহাল্লি',
+          gu: 'મરાઠહલ્લી',
+          ml: 'മറാത്തഹള്ളി',
+          pa: 'ਮਰਾਠਾਹੱਲੀ',
+          as: 'মাৰাঠাহাল্লি',
+          or: 'ମରାଠାହଲ୍ଲୀ'
+        }
+      },
+      {
+        id: 'Electronic City',
+        en: 'Electronic City',
+        translations: {
+          hi: 'इलेक्ट्रॉनिक सिटी',
+          kn: 'ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ',
+          te: 'ఎలక్ట్రానిక్ సిటీ',
+          ta: 'எலக்ட்ரானிக் சிட்டி',
+          mr: 'इलेक्ट्रॉनिक सिटी',
+          bn: 'ইলেকট্রনিক সিটি',
+          gu: 'ઇલેક્ટ્રોનિક સિટી',
+          ml: 'ഇലക്ട്രോണിക് സിറ്റി',
+          pa: 'ਇਲੈਕਟ੍ਰਾਨਿਕ ਸਿਟੀ',
+          as: 'ইলেকট্ৰনিক চিটি',
+          or: 'ଇଲେକ୍ଟ୍ରୋନିକ ସିଟି'
+        }
+      },
+      {
+        id: 'Hebbal',
+        en: 'Hebbal',
+        translations: {
+          hi: 'हेब्बाल',
+          kn: 'ಹೆಬ್ಬಾಳ',
+          te: 'హెబ్బాల్',
+          ta: 'ஹெப்பால்',
+          mr: 'हेब्बाल',
+          bn: 'হেব্বাল',
+          gu: 'હેબ્બાલ',
+          ml: 'ഹെബ്ബാൾ',
+          pa: 'ਹੇਬਾਲ',
+          as: 'হেব্বাল',
+          or: 'ହେବ୍ବାଲ'
+        }
+      },
+      {
+        id: 'Jayanagar',
+        en: 'Jayanagar',
+        translations: {
+          hi: 'जयनगर',
+          kn: 'ಜಯನಗರ',
+          te: 'జయనగర్',
+          ta: 'ஜெயநகர்',
+          mr: 'जयनगर',
+          bn: 'জয়নগর',
+          gu: 'જયનગર',
+          ml: 'ജയനഗർ',
+          pa: 'ਜੈ ਨਗਰ',
+          as: 'জয়নগৰ',
+          or: 'ଜୟନଗର'
+        }
+      },
+      {
+        id: 'BTM Layout',
+        en: 'BTM Layout',
+        translations: {
+          hi: 'बीटीएम लेआउट',
+          kn: 'ಬಿಟಿಎಂ ಲೇಔಟ್',
+          te: 'బిటిఎం లేఅవుట్',
+          ta: 'பிடிஎம் லேஅவுட்',
+          mr: 'बीटीएम लेआउट',
+          bn: 'বিটিএম লেআউট',
+          gu: 'બીટીએમ લેઆઉટ',
+          ml: 'ബി.ടി.എം ലേഔട്ട്',
+          pa: 'ਬੀਟੀਐਮ ਲੇਆਉਟ',
+          as: 'বিটিএম লেআউট',
+          or: 'ବିଟିଏମ ଲେଆଉଟ'
+        }
+      }
     ]
   },
   {
@@ -60,14 +220,142 @@ export const CITIES_DATA: CityData[] = [
       or: 'ମୁମ୍ବାଇ'
     },
     localities: [
-      { id: 'Andheri West', en: 'Andheri West', translations: { hi: 'अंधेरी पश्चिम', kn: 'ಅಂಧೇರಿ ಪಶ್ಚಿಮ', mr: 'अंधेरी पश्चिम' } },
-      { id: 'Bandra', en: 'Bandra', translations: { hi: 'बांद्रा', kn: 'ಬಾಂದ್ರಾ', mr: 'वांद्रे' } },
-      { id: 'Powai', en: 'Powai', translations: { hi: 'पवई', kn: 'ಪೊವೈ', mr: 'पवई' } },
-      { id: 'Goregaon', en: 'Goregaon', translations: { hi: 'गोरेगांव', kn: 'ಗೊರೆಗಾಂವ್', mr: 'गोरेगाव' } },
-      { id: 'Borivali', en: 'Borivali', translations: { hi: 'बोरिवली', kn: 'ಬೊರಿವಲಿ', mr: 'बोरिवली' } },
-      { id: 'Malad', en: 'Malad', translations: { hi: 'मलाड', kn: 'ಮಲಾಡ್', mr: 'मालाड' } },
-      { id: 'Dadar', en: 'Dadar', translations: { hi: 'दादर', kn: 'ದಾದರ್', mr: 'दादर' } },
-      { id: 'Kurla', en: 'Kurla', translations: { hi: 'कुर्ला', kn: 'ಕುರ್ಲಾ', mr: 'कुर्ला' } }
+      {
+        id: 'Andheri West',
+        en: 'Andheri West',
+        translations: {
+          hi: 'अंधेरी पश्चिम',
+          kn: 'ಅಂಧೇರಿ ಪಶ್ಚಿಮ',
+          te: 'అంధేరి పశ్చిమ',
+          ta: 'அந்தேரி மேற்கு',
+          mr: 'अंधेरी पश्चिम',
+          bn: 'আন্ধেরি পশ্চিম',
+          gu: 'અંધેરી પશ્ચિમ',
+          ml: 'അന്ധേരി വെസ്റ്റ്',
+          pa: 'ਅੰਧੇਰੀ ਪੱਛਮੀ',
+          as: 'আন্ধেৰী পশ্চিম',
+          or: 'ଅନ୍ଧେରୀ ପଶ୍ଚିମ'
+        }
+      },
+      {
+        id: 'Bandra',
+        en: 'Bandra',
+        translations: {
+          hi: 'बांद्रा',
+          kn: 'ಬಾಂದ್ರಾ',
+          te: 'బాంద్రా',
+          ta: 'பாந்த்ரா',
+          mr: 'वांद्रे',
+          bn: 'বান্দ্রা',
+          gu: 'બાંદ્રા',
+          ml: 'ബാന്ദ്ര',
+          pa: 'ਬਾਂਦਰਾ',
+          as: 'বান্দ্ৰা',
+          or: 'ବାନ୍ଦ୍ରା'
+        }
+      },
+      {
+        id: 'Powai',
+        en: 'Powai',
+        translations: {
+          hi: 'पवई',
+          kn: 'ಪೊವೈ',
+          te: 'పవాయ్',
+          ta: 'பவாய்',
+          mr: 'पवई',
+          bn: 'পোওয়াই',
+          gu: 'પવઇ',
+          ml: 'പവായ്',
+          pa: 'ਪੋਵਾਈ',
+          as: 'পোৱাই',
+          or: 'ପୋୱାଇ'
+        }
+      },
+      {
+        id: 'Goregaon',
+        en: 'Goregaon',
+        translations: {
+          hi: 'गोरेगांव',
+          kn: 'ಗೊರೆಗಾಂವ್',
+          te: 'గోరెగావ్',
+          ta: 'கோரேகாவ்',
+          mr: 'गोरेगाव',
+          bn: 'গোরেগাঁও',
+          gu: 'ગોરેગાંવ',
+          ml: 'ഗോരേഗാവ്',
+          pa: 'ਗੋਰੇਗਾਓਂ',
+          as: 'গোৰেগাঁও',
+          or: 'ଗୋରେଗାଓଁ'
+        }
+      },
+      {
+        id: 'Borivali',
+        en: 'Borivali',
+        translations: {
+          hi: 'बोरिवली',
+          kn: 'ಬೊರಿವಲಿ',
+          te: 'బోరివలి',
+          ta: 'போரிவலி',
+          mr: 'बोरिवली',
+          bn: 'বোরিভলি',
+          gu: 'બોરીવલી',
+          ml: 'ബോറിവലി',
+          pa: 'ਬੋਰੀਵਲੀ',
+          as: 'বোৰিভলী',
+          or: 'ବୋରିଭଲି'
+        }
+      },
+      {
+        id: 'Malad',
+        en: 'Malad',
+        translations: {
+          hi: 'मलाड',
+          kn: 'ಮಲಾಡ್',
+          te: 'మలాడ్',
+          ta: 'மலாட்',
+          mr: 'मालाड',
+          bn: 'মালাদ',
+          gu: 'મલાડ',
+          ml: 'മലാഡ്',
+          pa: 'ਮਲਾਡ',
+          as: 'মালাদ',
+          or: 'ମଲାଡ'
+        }
+      },
+      {
+        id: 'Dadar',
+        en: 'Dadar',
+        translations: {
+          hi: 'दादर',
+          kn: 'ದಾದರ್',
+          te: 'దాదర్',
+          ta: 'தாதர்',
+          mr: 'दादर',
+          bn: 'দাদার',
+          gu: 'દાદર',
+          ml: 'ദാദർ',
+          pa: 'ਦਾਦਰ',
+          as: 'দাদৰ',
+          or: 'ଦାଦର'
+        }
+      },
+      {
+        id: 'Kurla',
+        en: 'Kurla',
+        translations: {
+          hi: 'कुर्ला',
+          kn: 'ಕುರ್ಲಾ',
+          te: 'కుర్లా',
+          ta: 'குர்லா',
+          mr: 'कुर्ला',
+          bn: 'কুর্লা',
+          gu: 'કુર્લા',
+          ml: 'കുർള',
+          pa: 'ਕੁਰਲਾ',
+          as: 'কুৰ্লা',
+          or: 'କୁର୍ଲା'
+        }
+      }
     ]
   },
   {
@@ -87,11 +375,91 @@ export const CITIES_DATA: CityData[] = [
       or: 'ଥାନେ'
     },
     localities: [
-      { id: 'Thane West', en: 'Thane West', translations: { hi: 'ठाणे पश्चिम', kn: 'ಠಾಣೆ ಪಶ್ಚಿಮ', mr: 'ठाणे पश्चिम' } },
-      { id: 'Majiwada', en: 'Majiwada', translations: { hi: 'माजीवाडा', kn: 'ಮಾಜಿವಾಡ', mr: 'माजीवाडा' } },
-      { id: 'Ghodbunder Road', en: 'Ghodbunder Road', translations: { hi: 'घोडबंदर रोड', kn: 'ಘೋಡ್‌ಬಂದರ್ ರಸ್ತೆ', mr: 'घोडबंदर रोड' } },
-      { id: 'Vartak Nagar', en: 'Vartak Nagar', translations: { hi: 'वर्तक नगर', kn: 'ವರ್ತಕ್ ನಗರ', mr: 'वर्तक नगर' } },
-      { id: 'Naupada', en: 'Naupada', translations: { hi: 'नौपाड़ा', kn: 'ನೌಪಾಡಾ', mr: 'नौपाडा' } }
+      {
+        id: 'Thane West',
+        en: 'Thane West',
+        translations: {
+          hi: 'ठाणे पश्चिम',
+          kn: 'ಠಾಣೆ ಪಶ್ಚಿಮ',
+          te: 'థానే పశ్చిమ',
+          ta: 'தானே மேற்கு',
+          mr: 'ठाणे पश्चिम',
+          bn: 'থানে পশ্চিম',
+          gu: 'થાણે પશ્ચિમ',
+          ml: 'താനെ വെസ്റ്റ്',
+          pa: 'ਠਾਣੇ ਪੱਛਮੀ',
+          as: 'থানে পশ্চিম',
+          or: 'ଥାନେ ପଶ୍ଚିମ'
+        }
+      },
+      {
+        id: 'Majiwada',
+        en: 'Majiwada',
+        translations: {
+          hi: 'माजीवाडा',
+          kn: 'ಮಾಜಿವಾಡ',
+          te: 'మాజివాడా',
+          ta: 'மாஜிவாடா',
+          mr: 'माजीवाडा',
+          bn: 'মাজিওয়াদা',
+          gu: 'માજીવાડા',
+          ml: 'മാജിവാഡ',
+          pa: 'ਮਾਜੀਵਾੜਾ',
+          as: 'মাজিৱাদা',
+          or: 'ମାଜିୱାଡ଼ା'
+        }
+      },
+      {
+        id: 'Ghodbunder Road',
+        en: 'Ghodbunder Road',
+        translations: {
+          hi: 'घोडबंदर रोड',
+          kn: 'ಘೋಡ್‌ಬಂದರ್ ರಸ್ತೆ',
+          te: 'ఘోడ్‌బందర్ రోడ్',
+          ta: 'கோட்பந்தர் சாலை',
+          mr: 'घोडबंदर रोड',
+          bn: 'ঘোড়বন্দর রোড',
+          gu: 'ઘોડબંદર રોડ',
+          ml: 'ഘോട്ബന്ദർ റോഡ്',
+          pa: 'ਘੋੜਬੰਦਰ ਰੋਡ',
+          as: 'ঘোদবন্দৰ ৰোড',
+          or: 'ଘୋଡବନ୍ଦର ରୋଡ'
+        }
+      },
+      {
+        id: 'Vartak Nagar',
+        en: 'Vartak Nagar',
+        translations: {
+          hi: 'वर्तक नगर',
+          kn: 'ವರ್ತಕ್ ನಗರ',
+          te: 'వర్తక్ నగర్',
+          ta: 'வர்தக் நகர்',
+          mr: 'वर्तक नगर',
+          bn: 'বর্তক নগর',
+          gu: 'વર્તક નગર',
+          ml: 'വർത്തക് നഗർ',
+          pa: 'ਵਰਤਕ ਨਗਰ',
+          as: 'বৰ্তক নগৰ',
+          or: 'ବର୍ତ୍ତକ ନଗର'
+        }
+      },
+      {
+        id: 'Naupada',
+        en: 'Naupada',
+        translations: {
+          hi: 'नौपाड़ा',
+          kn: 'ನೌಪಾಡಾ',
+          te: 'నౌపాడా',
+          ta: 'நௌபாடா',
+          mr: 'नौपाडा',
+          bn: 'নৌপাড়া',
+          gu: 'નૌપાડા',
+          ml: 'നൗപാഡ',
+          pa: 'ਨੌਪਾੜਾ',
+          as: 'নৌপাড়া',
+          or: 'ନୌପାଡ଼ା'
+        }
+      }
     ]
   },
   {
@@ -111,12 +479,108 @@ export const CITIES_DATA: CityData[] = [
       or: 'ଗୁରୁଗ୍ରାମ'
     },
     localities: [
-      { id: 'Cyber City', en: 'Cyber City', translations: { hi: 'साइबर सिटी', kn: 'ಸೈಬರ್ ಸಿಟಿ' } },
-      { id: 'DLF Phase 1-5', en: 'DLF Phase 1-5', translations: { hi: 'डीएलएफ फेज 1-5', kn: 'ಡಿಎಲ್ಎಫ್ ಫೇಸ್ 1-5' } },
-      { id: 'Sector 29', en: 'Sector 29', translations: { hi: 'सेक्टर 29', kn: 'ಸೆಕ್ಟರ್ 29' } },
-      { id: 'Sector 56', en: 'Sector 56', translations: { hi: 'सेक्टर 56', kn: 'ಸೆಕ್ಟರ್ 56' } },
-      { id: 'Sohna Road', en: 'Sohna Road', translations: { hi: 'सोहना रोड', kn: 'ಸೋಹ್ನಾ ರಸ್ತೆ' } },
-      { id: 'Golf Course Road', en: 'Golf Course Road', translations: { hi: 'गोल्फ कोर्स रोड', kn: 'ಗಾಲ್ಫ್ ಕೋರ್ಸ್ ರಸ್ತೆ' } }
+      {
+        id: 'Cyber City',
+        en: 'Cyber City',
+        translations: {
+          hi: 'साइबर सिटी',
+          kn: 'ಸೈಬರ್ ಸಿಟಿ',
+          te: 'సైబర్ సిటీ',
+          ta: 'சைபர் சிட்டி',
+          mr: 'सायबर सिटी',
+          bn: 'সাইবার সিটি',
+          gu: 'સાયબર સિટી',
+          ml: 'സൈബർ സിറ്റി',
+          pa: 'ਸਾਈਬਰ ਸਿਟੀ',
+          as: 'চাইবাৰ চিটি',
+          or: 'ସାଇବର ସିଟି'
+        }
+      },
+      {
+        id: 'DLF Phase 1-5',
+        en: 'DLF Phase 1-5',
+        translations: {
+          hi: 'डीएलएफ फेज 1-5',
+          kn: 'ಡಿಎಲ್ಎಫ್ ಫೇಸ್ 1-5',
+          te: 'డిఎల్ఎఫ్ ఫేజ్ 1-5',
+          ta: 'டிஎல்எஃப் கட்டம் 1-5',
+          mr: 'डीएलएफ फेज 1-5',
+          bn: 'ডিএলএফ ফেজ ১-৫',
+          gu: 'ડીએલએફ ફેઝ 1-5',
+          ml: 'ഡി.എൽ.എഫ് ഫേസ് 1-5',
+          pa: 'ਡੀਐਲਐਫ ਫੇਜ਼ 1-5',
+          as: 'ডিএলএফ ফেজ ১-৫',
+          or: 'ଡିଏଲଏଫ ଫେଜ ୧-୫'
+        }
+      },
+      {
+        id: 'Sector 29',
+        en: 'Sector 29',
+        translations: {
+          hi: 'सेक्टर 29',
+          kn: 'ಸೆಕ್ಟರ್ 29',
+          te: 'సెక్టార్ 29',
+          ta: 'செக்டார் 29',
+          mr: 'सेक्टर 29',
+          bn: 'সেক্টর ২৯',
+          gu: 'સેક્ટર 29',
+          ml: 'സെക്ടർ 29',
+          pa: 'ਸੈਕਟਰ 29',
+          as: 'চেক্টৰ ২৯',
+          or: 'ସେକ୍ଟର ୨୯'
+        }
+      },
+      {
+        id: 'Sector 56',
+        en: 'Sector 56',
+        translations: {
+          hi: 'सेक्टर 56',
+          kn: 'ಸೆಕ್ಟರ್ 56',
+          te: 'సెక్టార్ 56',
+          ta: 'செக்டார் 56',
+          mr: 'सेक्टर 56',
+          bn: 'সেক্টর ৫৬',
+          gu: 'સેક્ટર 56',
+          ml: 'സെക്ടർ 56',
+          pa: 'ਸੈਕਟਰ 56',
+          as: 'চেক্টৰ ৫৬',
+          or: 'ସେକ୍ଟର ୫୬'
+        }
+      },
+      {
+        id: 'Sohna Road',
+        en: 'Sohna Road',
+        translations: {
+          hi: 'सोहना रोड',
+          kn: 'ಸೋಹ್ನಾ ರಸ್ತೆ',
+          te: 'సోహ్నా రోడ్',
+          ta: 'சோஹ்னா சாலை',
+          mr: 'सोहना रोड',
+          bn: 'সোহনা রোড',
+          gu: 'સોહના રોડ',
+          ml: 'സോഹ്ന റോഡ്',
+          pa: 'ਸੋਹਨਾ ਰੋਡ',
+          as: 'সোহনা ৰোড',
+          or: 'ସୋହନା ରୋଡ'
+        }
+      },
+      {
+        id: 'Golf Course Road',
+        en: 'Golf Course Road',
+        translations: {
+          hi: 'गोल्फ कोर्स रोड',
+          kn: 'ಗಾಲ್ಫ್ ಕೋರ್ಸ್ ರಸ್ತೆ',
+          te: 'గోల్ఫ్ కోర్స్ రోడ్',
+          ta: 'கோல்ஃப் கோர்ஸ் சாலை',
+          mr: 'गोल्फ कोर्स रोड',
+          bn: 'গল্ফ কোর্স রোড',
+          gu: 'ગોલ્ફ કોર્સ રોડ',
+          ml: 'ഗോൾഫ് കോഴ്സ് റോഡ്',
+          pa: 'ਗੋਲਫ ਕੋਰਸ ਰੋਡ',
+          as: 'গল্ফ কোৰ্চ ৰোড',
+          or: 'ଗଲ୍ଫ କୋର୍ସ ରୋଡ'
+        }
+      }
     ]
   },
   {
@@ -136,13 +600,125 @@ export const CITIES_DATA: CityData[] = [
       or: 'ଦିଲ୍ଲୀ'
     },
     localities: [
-      { id: 'Connaught Place', en: 'Connaught Place', translations: { hi: 'कनॉट प्लेस', kn: 'ಕನ್ನಾಟ್ ಪ್ಲೇಸ್' } },
-      { id: 'Dwarka', en: 'Dwarka', translations: { hi: 'द्वारका', kn: 'ದ್ವಾರಕಾ' } },
-      { id: 'South Extension', en: 'South Extension', translations: { hi: 'साउथ एक्सटेंशन', kn: 'ಸೌತ್ ಎಕ್ಸ್‌ಟೆನ್ಶನ್' } },
-      { id: 'Saket', en: 'Saket', translations: { hi: 'साकेत', kn: 'ಸಾಕೇತ್' } },
-      { id: 'Rohini', en: 'Rohini', translations: { hi: 'रोहिणी', kn: 'ರೋಹಿಣಿ' } },
-      { id: 'Lajpat Nagar', en: 'Lajpat Nagar', translations: { hi: 'लाजपत नगर', kn: 'ಲಾಜ್‌ಪತ್ ನಗರ' } },
-      { id: 'Karol Bagh', en: 'Karol Bagh', translations: { hi: 'करोल बाग', kn: 'ಕರೋಲ್ ಬಾಗ್' } }
+      {
+        id: 'Connaught Place',
+        en: 'Connaught Place',
+        translations: {
+          hi: 'कनॉट प्लेस',
+          kn: 'ಕನ್ನಾಟ್ ಪ್ಲೇಸ್',
+          te: 'కన్నాట్ ప్లేస్',
+          ta: 'கன்னாட் பிளேஸ்',
+          mr: 'कॅनॉट प्लेस',
+          bn: 'কনট প্লেস',
+          gu: 'કનોટ પ્લેસ',
+          ml: 'കനോട്ട് പ്ലേസ്',
+          pa: 'ਕਨਾਟ ਪਲੇਸ',
+          as: 'কনট প্লেচ',
+          or: 'କନଟ ପ୍ଲେସ'
+        }
+      },
+      {
+        id: 'Dwarka',
+        en: 'Dwarka',
+        translations: {
+          hi: 'द्वारका',
+          kn: 'ದ್ವಾರಕಾ',
+          te: 'ద్వారక',
+          ta: 'துவாரகா',
+          mr: 'द्वारका',
+          bn: 'দ্বারকা',
+          gu: 'દ્વારકા',
+          ml: 'ദ്വാരക',
+          pa: 'ਦਵਾਰਕਾ',
+          as: 'দ্বাৰকা',
+          or: 'ଦ୍ୱାରକା'
+        }
+      },
+      {
+        id: 'South Extension',
+        en: 'South Extension',
+        translations: {
+          hi: 'साउथ एक्सटेंशन',
+          kn: 'ಸೌತ್ ಎಕ್ಸ್‌ಟೆನ್ಶನ್',
+          te: 'సౌత్ ఎక్స్‌టెన్షన్',
+          ta: 'சவுத் எக்ஸ்டென்ஷன்',
+          mr: 'साउथ एक्स्टेंशन',
+          bn: 'সাউথ এক্সটেনশন',
+          gu: 'સાઉથ એક્સટેન્શન',
+          ml: 'സൗത്ത് എക്സ്റ്റൻഷൻ',
+          pa: 'ਸਾਊਥ ਐਕਸਟੈਂਸ਼ਨ',
+          as: 'চাউথ এক্সটেনচন',
+          or: 'ସାଉଥ ଏକ୍ସଟେନସନ'
+        }
+      },
+      {
+        id: 'Saket',
+        en: 'Saket',
+        translations: {
+          hi: 'साकेत',
+          kn: 'ಸಾಕೇತ್',
+          te: 'సాకేత్',
+          ta: 'சாகேத்',
+          mr: 'साकेत',
+          bn: 'সাকেত',
+          gu: 'સાકેત',
+          ml: 'സാകേത്',
+          pa: 'ਸਾਕੇਤ',
+          as: 'সাকেত',
+          or: 'ସାକେତ'
+        }
+      },
+      {
+        id: 'Rohini',
+        en: 'Rohini',
+        translations: {
+          hi: 'रोहिणी',
+          kn: 'ರೋಹಿಣಿ',
+          te: 'రోహిణి',
+          ta: 'ரோஹிணி',
+          mr: 'रोहिणी',
+          bn: 'রোহিণী',
+          gu: 'રોહિણી',
+          ml: 'രോഹിണി',
+          pa: 'ਰੋਹਿਣੀ',
+          as: 'ৰোহিণী',
+          or: 'ରୋହିଣୀ'
+        }
+      },
+      {
+        id: 'Lajpat Nagar',
+        en: 'Lajpat Nagar',
+        translations: {
+          hi: 'लाजपत नगर',
+          kn: 'ಲಾಜ್‌ಪತ್ ನಗರ',
+          te: 'లజపత్ నగర్',
+          ta: 'லஜ்பத் நகர்',
+          mr: 'लाजपत नगर',
+          bn: 'লাজপত নগর',
+          gu: 'લાજપત નગર',
+          ml: 'ലാജ്പത് നഗർ',
+          pa: 'ਲਾਜਪਤ ਨਗਰ',
+          as: 'লাজপত নগৰ',
+          or: 'ଲାଜପତ ନଗର'
+        }
+      },
+      {
+        id: 'Karol Bagh',
+        en: 'Karol Bagh',
+        translations: {
+          hi: 'करोल बाग',
+          kn: 'ಕರೋಲ್ ಬಾಗ್',
+          te: 'కరోల్ బాగ్',
+          ta: 'கரோல் பாக்',
+          mr: 'करोल बाग',
+          bn: 'করোল বাগ',
+          gu: 'કરોલ બાગ',
+          ml: 'കരോൾ ബാഗ്',
+          pa: 'ਕਰੋਲ ਬਾਗ਼',
+          as: 'কৰোল বাগ',
+          or: 'କରୋଲ ବାଗ'
+        }
+      }
     ]
   },
   {
@@ -162,13 +738,125 @@ export const CITIES_DATA: CityData[] = [
       or: 'ପୁଣେ'
     },
     localities: [
-      { id: 'Hinjewadi', en: 'Hinjewadi', translations: { hi: 'हिंजवडी', kn: 'ಹಿಂಜವಡಿ', mr: 'हिंजवडी' } },
-      { id: 'Kothrud', en: 'Kothrud', translations: { hi: 'कोथरूड', kn: 'ಕೊಥ್ರೂಡ್', mr: 'कोथरूड' } },
-      { id: 'Viman Nagar', en: 'Viman Nagar', translations: { hi: 'विमान नगर', kn: 'ವಿಮಾನ ನಗರ', mr: 'विमान नगर' } },
-      { id: 'Wakad', en: 'Wakad', translations: { hi: 'वाकड', kn: 'ವಾಕಡ್', mr: 'वाकड' } },
-      { id: 'Baner', en: 'Baner', translations: { hi: 'बाणेर', kn: 'ಬಾನೇರ್', mr: 'बाणेर' } },
-      { id: 'Kalyani Nagar', en: 'Kalyani Nagar', translations: { hi: 'कल्याणी नगर', kn: 'ಕಲ್ಯಾಣಿ ನಗರ', mr: 'कल्याणी नगर' } },
-      { id: 'Hadapsar', en: 'Hadapsar', translations: { hi: 'हडपसर', kn: 'हडपसर', mr: 'हडपसर' } }
+      {
+        id: 'Hinjewadi',
+        en: 'Hinjewadi',
+        translations: {
+          hi: 'हिंजवडी',
+          kn: 'ಹಿಂಜವಡಿ',
+          te: 'హింజేవాడి',
+          ta: 'ஹிஞ்சவடி',
+          mr: 'हिंजवडी',
+          bn: 'হিঞ্জেওয়াড়ি',
+          gu: 'હિંજવડી',
+          ml: 'ഹിഞ്ചേവാഡി',
+          pa: 'ਹਿੰਜੇਵਾੜੀ',
+          as: 'হিঞ্জেৱাড়ী',
+          or: 'ହିଞ୍ଜେୱାଡ଼ି'
+        }
+      },
+      {
+        id: 'Kothrud',
+        en: 'Kothrud',
+        translations: {
+          hi: 'कोथरूड',
+          kn: 'ಕೊಥ್ರೂಡ್',
+          te: 'కొత్రూడ్',
+          ta: 'கோத்ருட்',
+          mr: 'कोथरूड',
+          bn: 'কোথরূদ',
+          gu: 'કોથરૂડ',
+          ml: 'കോത്രുഡ്',
+          pa: 'ਕੋਥਰੂਡ',
+          as: 'কোথৰূদ',
+          or: 'କୋଥରୁଡ'
+        }
+      },
+      {
+        id: 'Viman Nagar',
+        en: 'Viman Nagar',
+        translations: {
+          hi: 'विमान नगर',
+          kn: 'ವಿಮಾನ ನಗರ',
+          te: 'విమాన్ నగర్',
+          ta: 'விமான் நகர்',
+          mr: 'विमान नगर',
+          bn: 'বিমান নগর',
+          gu: 'વિમાન નગર',
+          ml: 'വിമാൻ നഗർ',
+          pa: 'ਵਿਮਾਨ ਨਗਰ',
+          as: 'বিমান নগৰ',
+          or: 'ବିମାନ ନଗର'
+        }
+      },
+      {
+        id: 'Wakad',
+        en: 'Wakad',
+        translations: {
+          hi: 'वाकड',
+          kn: 'ವಾಕಡ್',
+          te: 'వాకడ్',
+          ta: 'வாகட்',
+          mr: 'वाकड',
+          bn: 'ওয়াকাদ',
+          gu: 'વાકડ',
+          ml: 'വാകഡ്',
+          pa: 'ਵਾਕਡ਼',
+          as: 'ৱাকাদ',
+          or: 'ୱାକଡ଼'
+        }
+      },
+      {
+        id: 'Baner',
+        en: 'Baner',
+        translations: {
+          hi: 'बाणेर',
+          kn: 'ಬಾನೇರ್',
+          te: 'బానెర్',
+          ta: 'பானேர்',
+          mr: 'बाणेर',
+          bn: 'বানের',
+          gu: 'બાનેર',
+          ml: 'ബാനർ',
+          pa: 'ਬਾਨੇਰ',
+          as: 'বানেৰ',
+          or: 'ବାନେର'
+        }
+      },
+      {
+        id: 'Kalyani Nagar',
+        en: 'Kalyani Nagar',
+        translations: {
+          hi: 'कल्याणी नगर',
+          kn: 'ಕಲ್ಯಾಣಿ ನಗರ',
+          te: 'కళ్యాణి నగర్',
+          ta: 'கல்யாணி நகர்',
+          mr: 'कल्याणी नगर',
+          bn: 'কল্যাণী নগর',
+          gu: 'કલ્યાણી નગર',
+          ml: 'കല്യാണി നഗർ',
+          pa: 'ਕਲਿਆਣੀ ਨਗਰ',
+          as: 'কল্যাণী নগৰ',
+          or: 'କଲ୍ୟାଣୀ ନଗର'
+        }
+      },
+      {
+        id: 'Hadapsar',
+        en: 'Hadapsar',
+        translations: {
+          hi: 'हडपसर',
+          kn: 'ಹಡಪಸರ್',
+          te: 'హడప్సర్',
+          ta: 'ஹடப்சர்',
+          mr: 'हडपसर',
+          bn: 'হদপসর',
+          gu: 'હડપસર',
+          ml: 'ഹഡപ്സർ',
+          pa: 'ਹੜਪਸਰ',
+          as: 'হদপচৰ',
+          or: 'ହଡପସର'
+        }
+      }
     ]
   },
   {
@@ -188,11 +876,91 @@ export const CITIES_DATA: CityData[] = [
       or: 'ନୋଇଡା'
     },
     localities: [
-      { id: 'Sector 18', en: 'Sector 18', translations: { hi: 'सेक्टर 18', kn: 'ಸೆಕ್ಟರ್ 18' } },
-      { id: 'Sector 62', en: 'Sector 62', translations: { hi: 'सेक्टर 62', kn: 'ಸೆಕ್ಟರ್ 62' } },
-      { id: 'Sector 137', en: 'Sector 137', translations: { hi: 'सेक्टर 137', kn: 'ಸೆಕ್ಟರ್ 137' } },
-      { id: 'Sector 50', en: 'Sector 50', translations: { hi: 'सेक्टर 50', kn: 'ಸೆಕ್ಟರ್ 50' } },
-      { id: 'Greater Noida', en: 'Greater Noida', translations: { hi: 'ग्रेटर नोएडा', kn: 'ಗ್ರೇಟರ್ ನೋಯ್ಡಾ' } }
+      {
+        id: 'Sector 18',
+        en: 'Sector 18',
+        translations: {
+          hi: 'सेक्टर 18',
+          kn: 'ಸೆಕ್ಟರ್ 18',
+          te: 'సెక్టార్ 18',
+          ta: 'செக்டார் 18',
+          mr: 'सेक्टर 18',
+          bn: 'সেক্টর ১৮',
+          gu: 'સેક્ટર 18',
+          ml: 'സെക്ടർ 18',
+          pa: 'ਸੈਕਟਰ 18',
+          as: 'চেক্টৰ ১৮',
+          or: 'ସେକ୍ଟର ୧୮'
+        }
+      },
+      {
+        id: 'Sector 62',
+        en: 'Sector 62',
+        translations: {
+          hi: 'सेक्टर 62',
+          kn: 'ಸೆಕ್ಟರ್ 62',
+          te: 'సెక్టార్ 62',
+          ta: 'செக்டார் 62',
+          mr: 'सेक्टर 62',
+          bn: 'সেক্টর ৬২',
+          gu: 'સેક્ટર 62',
+          ml: 'സെക്ടർ 62',
+          pa: 'ਸੈਕਟਰ 62',
+          as: 'চেক্টৰ ৬২',
+          or: 'ସେକ୍ଟର ୬୨'
+        }
+      },
+      {
+        id: 'Sector 137',
+        en: 'Sector 137',
+        translations: {
+          hi: 'सेक्टर 137',
+          kn: 'ಸೆಕ್ಟರ್ 137',
+          te: 'సెక్టార్ 137',
+          ta: 'செக்டார் 137',
+          mr: 'सेक्टर 137',
+          bn: 'সেক্টর ১৩৭',
+          gu: 'સેક્ટર 137',
+          ml: 'സെക്ടർ 137',
+          pa: 'ਸੈਕਟਰ 137',
+          as: 'চেক্টৰ ১৩৭',
+          or: 'ସେକ୍ଟର ୧୩୭'
+        }
+      },
+      {
+        id: 'Sector 50',
+        en: 'Sector 50',
+        translations: {
+          hi: 'सेक्टर 50',
+          kn: 'ಸೆಕ್ಟರ್ 50',
+          te: 'సెక్టార్ 50',
+          ta: 'செக்டார் 50',
+          mr: 'सेक्टर 50',
+          bn: 'সেক্টর ৫০',
+          gu: 'સેક્ટર 50',
+          ml: 'സെക്ടർ 50',
+          pa: 'ਸੈਕਟਰ 50',
+          as: 'চেক্টৰ ৫০',
+          or: 'ସେକ୍ଟର ୫୦'
+        }
+      },
+      {
+        id: 'Greater Noida',
+        en: 'Greater Noida',
+        translations: {
+          hi: 'ग्रेटर नोएडा',
+          kn: 'ಗ್ರೇಟರ್ ನೋಯ್ಡಾ',
+          te: 'గ్రేటర్ నోయిడా',
+          ta: 'கிரேட்டர் நொய்டா',
+          mr: 'ग्रेटर नोएडा',
+          bn: 'গ্রেটার নয়ডা',
+          gu: 'ગ્રેટર નોઈડા',
+          ml: 'ഗ്രേറ്റർ നോയിഡ',
+          pa: 'ਗ੍ਰੇਟਰ ਨੋਇਡਾ',
+          as: 'গ্ৰেটাৰ নয়ডা',
+          or: 'ଗ୍ରେଟର ନୋଇଡା'
+        }
+      }
     ]
   },
   {
@@ -212,11 +980,91 @@ export const CITIES_DATA: CityData[] = [
       or: 'ନଭି ମୁମ୍ବାଇ'
     },
     localities: [
-      { id: 'Vashi', en: 'Vashi', translations: { hi: 'वाशी', kn: 'ವಾಶಿ', mr: 'वाशी' } },
-      { id: 'Nerul', en: 'Nerul', translations: { hi: 'नेरूळ', kn: 'ನೇರುಲ್', mr: 'नेरूळ' } },
-      { id: 'Kharghar', en: 'Kharghar', translations: { hi: 'खारघर', kn: 'ಖಾರ್ಘರ್', mr: 'खारघर' } },
-      { id: 'Panvel', en: 'Panvel', translations: { hi: 'पनवेल', kn: 'ಪನ್ವೇಲ್', mr: 'पनवेल' } },
-      { id: 'Belapur', en: 'Belapur', translations: { hi: 'बेलापुर', kn: 'ಬೆಲಾಪುರ', mr: 'बेलापूर' } }
+      {
+        id: 'Vashi',
+        en: 'Vashi',
+        translations: {
+          hi: 'वाशी',
+          kn: 'ವಾಶಿ',
+          te: 'వాషి',
+          ta: 'வாஷி',
+          mr: 'वाशी',
+          bn: 'ভাশি',
+          gu: 'વાશી',
+          ml: 'വാഷി',
+          pa: 'ਵਾਸ਼ੀ',
+          as: 'ভাছি',
+          or: 'ଭାଶି'
+        }
+      },
+      {
+        id: 'Nerul',
+        en: 'Nerul',
+        translations: {
+          hi: 'नेरूळ',
+          kn: 'ನೇರುಲ್',
+          te: 'నేరుల్',
+          ta: 'நேருள்',
+          mr: 'नेरूळ',
+          bn: 'নেরুল',
+          gu: 'નેરૂલ',
+          ml: 'നേരുൾ',
+          pa: 'ਨੇਰੁਲ',
+          as: 'নেৰুল',
+          or: 'ନେରୁଲ'
+        }
+      },
+      {
+        id: 'Kharghar',
+        en: 'Kharghar',
+        translations: {
+          hi: 'खारघर',
+          kn: 'ಖಾರ್ಘರ್',
+          te: 'ఖార్ఘర్',
+          ta: 'கார்கர்',
+          mr: 'खारघर',
+          bn: 'খারঘর',
+          gu: 'ખારઘર',
+          ml: 'ഖാർഘർ',
+          pa: 'ਖਾਰਘਰ',
+          as: 'খাৰঘৰ',
+          or: 'ଖାରଘର'
+        }
+      },
+      {
+        id: 'Panvel',
+        en: 'Panvel',
+        translations: {
+          hi: 'पनवेल',
+          kn: 'ಪನ್ವೇಲ್',
+          te: 'పన్వేల్',
+          ta: 'பன்வெல்',
+          mr: 'पनवेल',
+          bn: 'পানভেল',
+          gu: 'પનવેલ',
+          ml: 'പൻവേൽ',
+          pa: 'ਪਨਵੇਲ',
+          as: 'পানভেল',
+          or: 'ପାନଭେଲ'
+        }
+      },
+      {
+        id: 'Belapur',
+        en: 'Belapur',
+        translations: {
+          hi: 'बेलापुर',
+          kn: 'ಬೆಲಾಪುರ',
+          te: 'బేలాపూర్',
+          ta: 'பெலாப்பூர்',
+          mr: 'बेलापूर',
+          bn: 'বেলাপুর',
+          gu: 'બેલાપુર',
+          ml: 'ബേലാപൂർ',
+          pa: 'ਬੇਲਾਪੁਰ',
+          as: 'বেলাপুৰ',
+          or: 'ବେଲାପୁର'
+        }
+      }
     ]
   },
   {
@@ -236,11 +1084,91 @@ export const CITIES_DATA: CityData[] = [
       or: 'ଗାଜିଆବାଦ'
     },
     localities: [
-      { id: 'Indirapuram', en: 'Indirapuram', translations: { hi: 'इंदिरापुरम', kn: 'ಇಂದಿರಾಪುರಂ' } },
-      { id: 'Vaishali', en: 'Vaishali', translations: { hi: 'वैशाली', kn: 'ವೈಶಾಲಿ' } },
-      { id: 'Raj Nagar Extension', en: 'Raj Nagar Extension', translations: { hi: 'राज नगर एक्सटेंशन', kn: 'ರಾಜ್ ನಗರ ಎಕ್ಸ್‌ಟೆನ್ಶನ್' } },
-      { id: 'Crossings Republik', en: 'Crossings Republik', translations: { hi: 'क्रॉसिंग्स रिपब्लिक', kn: 'ಕ್ರಾಸ್ಸಿಂಗ್ಸ್ ರಿಪಬ್ಲಿಕ್' } },
-      { id: 'Vasundhara', en: 'Vasundhara', translations: { hi: 'वसुंधरा', kn: 'ವಸುಂಧರಾ' } }
+      {
+        id: 'Indirapuram',
+        en: 'Indirapuram',
+        translations: {
+          hi: 'इंदिरापुरम',
+          kn: 'ಇಂದಿರಾಪುರಂ',
+          te: 'ఇందిరాపురం',
+          ta: 'இந்திராபுரம்',
+          mr: 'इंदिरापुरम',
+          bn: 'ইন্দিরাপোরম',
+          gu: 'ઇન્દિરાપુરમ',
+          ml: 'ഇന്ദിരാപുരം',
+          pa: 'ਇੰਦਰਾਪੁਰਮ',
+          as: 'ইন্দিৰাপুৰম',
+          or: 'ଇନ୍ଦିରାପୁରମ'
+        }
+      },
+      {
+        id: 'Vaishali',
+        en: 'Vaishali',
+        translations: {
+          hi: 'वैशाली',
+          kn: 'ವೈಶಾಲಿ',
+          te: 'వైశాలి',
+          ta: 'வைசாலி',
+          mr: 'वैशाली',
+          bn: 'বৈশাখী',
+          gu: 'વૈશાલી',
+          ml: 'വൈശാലി',
+          pa: 'ਵੈਸ਼ਾਲੀ',
+          as: 'বৈশালী',
+          or: 'ବୈଶାଳୀ'
+        }
+      },
+      {
+        id: 'Raj Nagar Extension',
+        en: 'Raj Nagar Extension',
+        translations: {
+          hi: 'राज नगर एक्सटेंशन',
+          kn: 'ರಾಜ್ ನಗರ ಎಕ್ಸ್‌ಟೆನ್ಶನ್',
+          te: 'రాజ్ నగర్ ఎక్స్‌టెన్షన్',
+          ta: 'ராஜ் நகர் எக்ஸ்டென்ஷன்',
+          mr: 'राज नगर एक्स्टेंशन',
+          bn: 'রাজ নগর এক্সটেনশন',
+          gu: 'રાજ નગર એક્સટેન્શન',
+          ml: 'രാജ് നഗർ എക്സ്റ്റൻഷൻ',
+          pa: 'ਰਾਜ ਨਗਰ ਐਕਸਟੈਂਸ਼ਨ',
+          as: 'ৰাজ নগৰ এক্সটেনচন',
+          or: 'ରାଜ ନଗର ଏକ୍ସଟେନସନ'
+        }
+      },
+      {
+        id: 'Crossings Republik',
+        en: 'Crossings Republik',
+        translations: {
+          hi: 'क्रॉसिंग्स रिपब्लिक',
+          kn: 'ಕ್ರಾಸ್ಸಿಂಗ್ಸ್ ರಿಪಬ್ಲಿಕ್',
+          te: 'క్రాసింగ్స్ రిపబ్లిక్',
+          ta: 'கிராஸிங்ஸ் குடியரசு',
+          mr: 'क्रॉसिंग्स रिपब्लिक',
+          bn: 'ক্রসিংস রিপাবলিক',
+          gu: 'ક્રોસિંગ્સ રિપબ્લિક',
+          ml: 'ക്രോസിംഗ്സ് റിപ്പബ്ലിക്',
+          pa: 'ਕ੍ਰਾਸਿੰਗਸ ਰਿਪਬਲਿਕ',
+          as: 'ক্ৰছিংছ ৰিপাব্লিক',
+          or: 'କ୍ରସିଙ୍ଗ୍ସ ରିପବ୍ଲିକ'
+        }
+      },
+      {
+        id: 'Vasundhara',
+        en: 'Vasundhara',
+        translations: {
+          hi: 'वसुंधरा',
+          kn: 'ವಸುಂಧರಾ',
+          te: 'వసుంధర',
+          ta: 'வசுந்தரா',
+          mr: 'वसुंधरा',
+          bn: 'বসুন্ধরা',
+          gu: 'વસુંધરા',
+          ml: 'വസുന്ധര',
+          pa: 'ਵਸੁੰਧਰਾ',
+          as: 'বসুন্ধৰা',
+          or: 'ବସୁନ୍ଧରା'
+        }
+      }
     ]
   },
   {
@@ -260,14 +1188,142 @@ export const CITIES_DATA: CityData[] = [
       or: 'ହାଇଦ୍ରାବାଦ'
     },
     localities: [
-      { id: 'Gachibowli', en: 'Gachibowli', translations: { te: 'గచ్చిబౌలి', hi: 'गच्चीबाउली', kn: 'ಗಚ್ಚಿಬೌಲಿ' } },
-      { id: 'Hitec City', en: 'Hitec City', translations: { te: 'హైటెక్ సిటీ', hi: 'हाईटेक सिटी', kn: 'ಹೈಟೆಕ್ ಸಿಟಿ' } },
-      { id: 'Madhapur', en: 'Madhapur', translations: { te: 'మాదాపూర్', hi: 'माधापुर', kn: 'ಮಾದಾಪುರ' } },
-      { id: 'Kondapur', en: 'Kondapur', translations: { te: 'కొండాపూర్', hi: 'कोंडापुर', kn: 'ಕೊಂಡಾಪುರ' } },
-      { id: 'Jubilee Hills', en: 'Jubilee Hills', translations: { te: 'జూబ్లీ హिल्स', hi: 'जुबली हिल्स', kn: 'ಜುಬಿಲಿ ಹಿಲ್ಸ್' } },
-      { id: 'Banjara Hills', en: 'Banjara Hills', translations: { te: 'బంజారా హिल्स', hi: 'బంజારા ಹिल्स', kn: 'ಬಂಜಾರಾ ಹಿಲ್ಸ್' } },
-      { id: 'Kukatpally', en: 'Kukatpally', translations: { te: 'కూకట్‌పల్లి', hi: 'कुकटपल्ली', kn: 'ಕೂಕಟ್‌ಪಲ್ಲಿ' } },
-      { id: 'Miyapur', en: 'Miyapur', translations: { te: 'మియాపూర్', hi: 'मियापुर', kn: 'ಮಿಯಾಪುರ' } }
+      {
+        id: 'Gachibowli',
+        en: 'Gachibowli',
+        translations: {
+          te: 'గచ్చిబౌలి',
+          hi: 'गच्चीबाउली',
+          kn: 'ಗಚ್ಚಿಬೌಲಿ',
+          ta: 'கச்சிபௌலி',
+          mr: 'गच्चीबाउली',
+          bn: 'গাচিবৌলি',
+          gu: 'ગચીબોવલી',
+          ml: 'ഗച്ചിബൗലി',
+          pa: 'ਗਚੀਬਾਉਲੀ',
+          as: 'গাচিবৌলী',
+          or: 'ଗାଚିବୋଲି'
+        }
+      },
+      {
+        id: 'Hitec City',
+        en: 'Hitec City',
+        translations: {
+          te: 'హైటెక్ సిటీ',
+          hi: 'हाईटेक सिटी',
+          kn: 'ಹೈಟೆಕ್ ಸಿಟಿ',
+          ta: 'ஹைடெக் சிட்டி',
+          mr: 'हायटेक सिटी',
+          bn: 'হাইটেক সিটি',
+          gu: 'હાઇટેક સિટી',
+          ml: 'ഹൈടെക് സിറ്റി',
+          pa: 'ਹਾਈਟੈਕ ਸਿਟੀ',
+          as: 'হাইটেক চিটি',
+          or: 'ହାଇଟେକ ସିଟି'
+        }
+      },
+      {
+        id: 'Madhapur',
+        en: 'Madhapur',
+        translations: {
+          te: 'మాదాపూర్',
+          hi: 'माधापुर',
+          kn: 'ಮಾದಾಪುರ',
+          ta: 'மாதாபூர்',
+          mr: 'माधापूर',
+          bn: 'মাধাপুর',
+          gu: 'માધાપુર',
+          ml: 'മാധാപൂർ',
+          pa: 'ਮਾਧਾਪੁਰ',
+          as: 'মাধাপুৰ',
+          or: 'ମାଧାପୁର'
+        }
+      },
+      {
+        id: 'Kondapur',
+        en: 'Kondapur',
+        translations: {
+          te: 'కొండాపూర్',
+          hi: 'कोंडापुर',
+          kn: 'ಕೊಂಡಾಪುರ',
+          ta: 'கொண்டாபூர்',
+          mr: 'कोंडापूर',
+          bn: 'কোন্ডাপুর',
+          gu: 'કોન્ડાપુર',
+          ml: 'കൊണ്ടാപൂർ',
+          pa: 'ਕੋਂਡਾਪੁਰ',
+          as: 'কোণ্ডাপুৰ',
+          or: 'କୋଣ୍ଡାପୁର'
+        }
+      },
+      {
+        id: 'Jubilee Hills',
+        en: 'Jubilee Hills',
+        translations: {
+          te: 'జూబ్లీ హిల్స్',
+          hi: 'जुबली हिल्स',
+          kn: 'ಜುಬಿಲಿ ಹಿಲ್ಸ್',
+          ta: 'ஜூப்ளி ஹில்ஸ்',
+          mr: 'जुबली हिल्स',
+          bn: 'জুবিলি হিলস',
+          gu: 'જુબિલી હિલ્સ',
+          ml: 'ജൂബിലി ഹിൽസ്',
+          pa: 'ਜੁਬਲੀ ਹਿਲਜ਼',
+          as: 'জুবিলী হিলচ',
+          or: 'ଜୁବିଲି ହିଲ୍ସ'
+        }
+      },
+      {
+        id: 'Banjara Hills',
+        en: 'Banjara Hills',
+        translations: {
+          te: 'బంజారా హిల్స్',
+          hi: 'बंजारा हिल्स',
+          kn: 'ಬಂಜಾರಾ ಹಿಲ್ಸ್',
+          ta: 'பஞ்சாரா ஹில்ஸ்',
+          mr: 'बंजारा हिल्स',
+          bn: 'বাঞ্জারা হিলস',
+          gu: 'બંજારા હિલ્સ',
+          ml: 'ബഞ്ചാര ഹിൽസ്',
+          pa: 'ਬੰਜਾਰਾ ਹਿਲਜ਼',
+          as: 'বাঞ্জাৰা হিলচ',
+          or: 'ବଞ୍ଜାରା ହିଲ୍ସ'
+        }
+      },
+      {
+        id: 'Kukatpally',
+        en: 'Kukatpally',
+        translations: {
+          te: 'కూకట్‌పల్లి',
+          hi: 'कुकटपल्ली',
+          kn: 'ಕೂಕಟ್‌ಪಲ್ಲಿ',
+          ta: 'கூகட்பள்ளி',
+          mr: 'कुकटपल्ली',
+          bn: 'কুকটপল্লি',
+          gu: 'કુકટપલ્લી',
+          ml: 'കൂക്കട്പള്ളി',
+          pa: 'ਕੂਕਟਪੱਲੀ',
+          as: 'কুকটপল্লী',
+          or: 'କୁକଟପଲ୍ଲୀ'
+        }
+      },
+      {
+        id: 'Miyapur',
+        en: 'Miyapur',
+        translations: {
+          te: 'మియాపూర్',
+          hi: 'मियापुर',
+          kn: 'ಮಿಯಾಪುರ',
+          ta: 'மியாபூர்',
+          mr: 'मियापूर',
+          bn: 'মিয়াপুর',
+          gu: 'મિયાપુર',
+          ml: 'മിയാപ്പൂർ',
+          pa: 'ਮਿਆਪੁਰ',
+          as: 'মিয়াপুৰ',
+          or: 'ମିୟାପୁର'
+        }
+      }
     ]
   },
   {
@@ -287,27 +1343,155 @@ export const CITIES_DATA: CityData[] = [
       or: 'ଚେନ୍ନାଇ'
     },
     localities: [
-      { id: 'Adyar', en: 'Adyar', translations: { ta: 'அடையாறு', hi: 'अडयार', kn: 'ಅಡ್ಯಾರ್' } },
-      { id: 'Anna Nagar', en: 'Anna Nagar', translations: { ta: 'அண்ணா நகர்', hi: 'अन्ना नगर', kn: 'ಅಣ್ಣಾ ನಗರ' } },
-      { id: 'Velachery', en: 'Velachery', translations: { ta: 'வேளச்சேரி', hi: 'वेलाचेरी', kn: 'ವೇಲಚೇರಿ' } },
-      { id: 'T. Nagar', en: 'T. Nagar', translations: { ta: 'டி. நகர்', hi: 'टी. नगर', kn: 'ಟಿ. ನಗರ' } },
-      { id: 'OMR', en: 'OMR', translations: { ta: 'ஓஎம்ஆர்', hi: 'ओएमआर', kn: 'ಒಎಂಆರ್' } },
-      { id: 'Mylapore', en: 'Mylapore', translations: { ta: 'மயிலாப்பூர்', hi: 'मायलापुर', kn: 'ಮೈಲಾಪುರ' } },
-      { id: 'Guindy', en: 'Guindy', translations: { ta: 'கிண்டி', hi: 'गिडी', kn: 'ಗಿಂಡಿ' } },
-      { id: 'Porur', en: 'Porur', translations: { ta: 'போரூர்', hi: 'पोरुर', kn: 'ಪೋರೂರ್' } }
+      {
+        id: 'Adyar',
+        en: 'Adyar',
+        translations: {
+          ta: 'அடையாறு',
+          hi: 'अडयार',
+          kn: 'ಅಡ್ಯಾರ್',
+          te: 'అడయార్',
+          mr: 'अडयार',
+          bn: 'আদিয়ার',
+          gu: 'અડયાર',
+          ml: 'അഡയാർ',
+          pa: 'ਅਡਯਾਰ',
+          as: 'আদিয়াৰ',
+          or: 'ଅଡୟାର'
+        }
+      },
+      {
+        id: 'Anna Nagar',
+        en: 'Anna Nagar',
+        translations: {
+          ta: 'அண்ணா நகர்',
+          hi: 'अन्ना नगर',
+          kn: 'ಅಣ್ಣಾ ನಗರ',
+          te: 'అన్నా నగర్',
+          mr: 'अण्णा नगर',
+          bn: 'আন্না নগর',
+          gu: 'અન્ના નગર',
+          ml: 'അണ്ണാ നഗർ',
+          pa: 'ਅੰਨਾ ਨਗਰ',
+          as: 'আন্না নগৰ',
+          or: 'ଅନ୍ନା ନଗର'
+        }
+      },
+      {
+        id: 'Velachery',
+        en: 'Velachery',
+        translations: {
+          ta: 'வேளச்சேரி',
+          hi: 'वेलाचेरी',
+          kn: 'ವೇಲಚೇರಿ',
+          te: 'వేలచేరి',
+          mr: 'वेलाचेरी',
+          bn: 'ভেলাচেরি',
+          gu: 'વેલાચેરી',
+          ml: 'വേളാച്ചേരി',
+          pa: 'ਵੇਲਾਚੇਰੀ',
+          as: 'ভেলাচেৰী',
+          or: 'ଭେଲାଚେରୀ'
+        }
+      },
+      {
+        id: 'T. Nagar',
+        en: 'T. Nagar',
+        translations: {
+          ta: 'டி. நகர்',
+          hi: 'टी. नगर',
+          kn: 'ಟಿ. ನಗರ',
+          te: 'టి. నగర్',
+          mr: 'टी. नगर',
+          bn: 'টি. নগর',
+          gu: 'ટી. નગર',
+          ml: 'ടി. നഗർ',
+          pa: 'ਟੀ. ਨਗਰ',
+          as: 'টি. নগৰ',
+          or: 'ଟି. ନଗର'
+        }
+      },
+      {
+        id: 'OMR',
+        en: 'OMR',
+        translations: {
+          ta: 'ஓஎம்ஆர்',
+          hi: 'ओएमआर',
+          kn: 'ಒಎಂಆರ್',
+          te: 'ఓఎంఆర్',
+          mr: 'ओएमआर',
+          bn: 'ওএমআর',
+          gu: 'ઓએમઆર',
+          ml: 'ഒ.എം.ആർ',
+          pa: 'ਓਐਮਆਰ',
+          as: "অ'এমআৰ",
+          or: 'ଓଏମଆର'
+        }
+      },
+      {
+        id: 'Mylapore',
+        en: 'Mylapore',
+        translations: {
+          ta: 'மயிலாப்பூர்',
+          hi: 'मायलापुर',
+          kn: 'ಮೈಲಾಪುರ',
+          te: 'మైలాపూర్',
+          mr: 'मायलापूर',
+          bn: 'ময়লাপুর',
+          gu: 'માયલાપુર',
+          ml: 'മൈലാപ്പൂർ',
+          pa: 'ਮਾਈਲਾਪੁਰ',
+          as: 'ময়লাপুৰ',
+          or: 'ମୟଲାପୁର'
+        }
+      },
+      {
+        id: 'Guindy',
+        en: 'Guindy',
+        translations: {
+          ta: 'கிண்டி',
+          hi: 'गिडी',
+          kn: 'ಗಿಂಡಿ',
+          te: 'గిండీ',
+          mr: 'गिंडी',
+          bn: 'গিন্ডি',
+          gu: 'ગિંડી',
+          ml: 'ഗിണ്ടി',
+          pa: 'ਗਿੰਡੀ',
+          as: 'গিন্দী',
+          or: 'ଗିଣ୍ଡି'
+        }
+      },
+      {
+        id: 'Porur',
+        en: 'Porur',
+        translations: {
+          ta: 'போரூர்',
+          hi: 'पोरुर',
+          kn: 'ಪೋರೂರ್',
+          te: 'పోరూర్',
+          mr: 'पोरूर',
+          bn: 'পোরুর',
+          gu: 'પોરુર',
+          ml: 'പോരൂർ',
+          pa: 'ਪੋਰੁਰ',
+          as: 'পোৰুৰ',
+          or: 'ପୋରୁର'
+        }
+      }
     ]
   }
 ];
 
 /**
  * Returns formatted bilingual label like:
- * "बैंगलोर / Bangalore" or "ಬೆಂಗಳೂರು / Bengaluru" or "Mumbai"
+ * "बैंगलोर / Bengaluru" or "ಬೆಂಗಳೂರು / Bengaluru" or "Bengaluru"
  */
 export function getCityLabel(city: CityData, lang: Language): string {
   if (lang === 'en') {
     return city.en;
   }
-  const translated = city.translations[lang] || city.translations['hi'];
+  const translated = city.translations[lang];
   if (translated) {
     return `${translated} / ${city.en}`;
   }
@@ -316,13 +1500,13 @@ export function getCityLabel(city: CityData, lang: Language): string {
 
 /**
  * Returns formatted bilingual label for a locality:
- * "ಬೆಳ್ಳಂದೂರು / Bellandur" or "Bellandur"
+ * "കോരമംഗല / Koramangala" or "ಬೆಳ್ಳಂದೂರು / Bellandur" or "Koramangala"
  */
 export function getLocalityLabel(locality: LocationItem, lang: Language): string {
   if (lang === 'en') {
     return locality.en;
   }
-  const translated = locality.translations?.[lang] || locality.translations?.['hi'];
+  const translated = locality.translations?.[lang];
   if (translated) {
     return `${translated} / ${locality.en}`;
   }

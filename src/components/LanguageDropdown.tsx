@@ -5,11 +5,13 @@ import { Language, LANGUAGE_LIST } from '../translations';
 interface LanguageDropdownProps {
   currentLanguage: Language;
   onSelectLanguage: (lang: Language) => void;
+  headerHint?: string;
 }
 
 export const LanguageDropdown: React.FC<LanguageDropdownProps> = ({
   currentLanguage,
-  onSelectLanguage
+  onSelectLanguage,
+  headerHint
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ export const LanguageDropdown: React.FC<LanguageDropdownProps> = ({
       {isOpen && (
         <div className="lang-dropdown-menu" role="listbox">
           <div className="lang-dropdown-header-hint">
-            <span>Select Language / भाषा चुनें</span>
+            <span>{headerHint || 'Select Language / भाषा चुनें'}</span>
           </div>
 
           <div className="lang-dropdown-items-list">

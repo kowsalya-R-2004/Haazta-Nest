@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { 
   ShieldCheck, 
   TrendingUp, 
@@ -26,75 +26,14 @@ import {
   ChevronDown,
   ArrowUp
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import logoImg from './assets/LOGO1.png';
 import haatzaWomanImg from './assets/haatza women.jpeg';
 
-// Real Partner Employee Images from src/assets/images
-import dhavanamaniImg from './assets/images/Dhavanamani.png';
-import ritaChetryImg from './assets/images/Rita Chetry.png';
-import joymotiBhorImg from './assets/images/Joymoti Bhor.png';
-import sabitaNewarImg from './assets/images/Sabita Newar.png';
-import karmiHansdahImg from './assets/images/Karmi Hansdah.png';
-import rumpaDasImg from './assets/images/Rumpa Das.png';
-import mohimaBibiImg from './assets/images/Mohima Bibi.png';
-import jaliShilImg from './assets/images/Jali Shil.png';
-
-import { Language, translations } from './translations';
+import { Language, LANGUAGE_LIST, translations } from './translations';
 import { LanguageDropdown } from './components/LanguageDropdown';
 import { CITIES_DATA, getCityLabel, getLocalityLabel } from './data/locations';
 import { CustomBilingualSelect } from './components/CustomBilingualSelect';
-
-const EMPLOYEE_STORIES = [
-  {
-    name: 'Dhavanamani',
-    category: 'Home Care & Cleaning Specialist • Bengaluru',
-    quote: 'The professional training taught me modern house cleaning techniques and etiquette. Customers appreciate my work and treat me with immense respect.',
-    avatar: dhavanamaniImg
-  },
-  {
-    name: 'Rita Chetry',
-    category: 'Cooking & Kitchen Care Expert • Bengaluru',
-    quote: 'With Nest Services, my payments are transferred directly to my bank account every week without delay. Everything is clear, transparent, and hassle-free.',
-    avatar: ritaChetryImg
-  },
-  {
-    name: 'Joymoti Bhor',
-    category: 'Daily Household Helper • Bengaluru',
-    quote: 'I choose the localities and working hours that fit my family schedule. The flexible work opportunities have given me financial independence.',
-    avatar: joymotiBhorImg
-  },
-  {
-    name: 'Sabita Newar',
-    category: 'Deep Cleaning Specialist • Bengaluru',
-    quote: 'Joining was 100% free with no brokerage fees. Nest provided high-quality uniforms and safety training that makes us feel proud every day.',
-    avatar: sabitaNewarImg
-  },
-  {
-    name: 'Karmi Hansdah',
-    category: 'Kitchen & Meal Partner • Bengaluru',
-    quote: 'Being part of a verified, women-focused platform gives me confidence and security. My customers always give high ratings for my service.',
-    avatar: karmiHansdahImg
-  },
-  {
-    name: 'Rumpa Das',
-    category: 'Housekeeping Professional • Bengaluru',
-    quote: 'Customer satisfaction is always recognized here. The steady bookings and supportive partner team have helped me provide for my children.',
-    avatar: rumpaDasImg
-  },
-  {
-    name: 'Mohima Bibi',
-    category: 'Home Organization & Care • Bengaluru',
-    quote: 'The onboarding was so welcoming and fast. Having verified households and clear payment information makes every working day dignified.',
-    avatar: mohimaBibiImg
-  },
-  {
-    name: 'Jali Shil',
-    category: 'Housekeeping & Sanitization Expert • Bengaluru',
-    quote: 'Nest Services gave me steady work opportunities close to my home. Getting regular bookings and transparent earnings transformed my confidence.',
-    avatar: jaliShilImg
-  }
-];
+import { getEmployeeStories } from './data/employeeStories';
 
 const FAQ_ICONS = [
   <FileText size={16} />,
@@ -113,31 +52,134 @@ export const App: React.FC = () => {
     return (localStorage.getItem('nest_lang') as Language) || 'en';
   });
 
-  const handleLanguageChange = (newLang: Language) => {
-    setLanguage(newLang);
-    localStorage.setItem('nest_lang', newLang);
-    showToast(`Language: ${translations[newLang].selectLanguage}`);
-  };
-
   const t = translations[language] || translations.en;
+  const employeeStories = useMemo(() => getEmployeeStories(language), [language]);
 
   // Form State
   const [fullName, setFullName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
-  const [city, setCity] = useState('Bengaluru');
-  const [locality, setLocality] = useState('Bellandur');
-  const [choresWillingness, setChoresWillingness] = useState<'yes' | 'no'>('yes');
-  const [gender, setGender] = useState<'female' | 'male' | 'other'>('female');
+  const [city, setCity] = useState('');
+  const [locality, setLocality] = useState('');
+  const [choresWillingness, setChoresWillingness] = useState<'yes' | 'no' | ''>('');
+  const [gender, setGender] = useState<'female' | 'male' | 'other' | ''>('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formError, setFormError] = useState<string | null>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  type FormFieldKey = 'name' | 'mobile' | 'city' | 'area' | 'chores' | 'gender';
+
+  const [fieldErrors, setFieldErrors] = useState<{
+    name?: boolean;
+    mobile?: boolean;
+    city?: boolean;
+    area?: boolean;
+    chores?: boolean;
+    gender?: boolean;
+  }>({});
+
+  const clearFieldError = (field: FormFieldKey) => {
+    setFieldErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  };
+
+  // Reactive Status Types
+  type SuccessStatus = 'new' | 'duplicate' | null;
+  type FormErrorStatus = 'enterName' | 'enterMobile' | 'cityRequired' | 'areaRequired' | 'failed' | 'network' | null;
+
+  type ToastState =
+    | { type: 'langChanged'; langCode: Language }
+    | { type: 'successNew' }
+    | { type: 'duplicate' }
+    | { type: 'enterName' }
+    | { type: 'enterMobile' }
+    | { type: 'cityRequired' }
+    | { type: 'areaRequired' }
+    | { type: 'failed' }
+    | { type: 'network' }
+    | { type: 'custom'; text: string }
+    | null;
+
+  const [successStatus, setSuccessStatus] = useState<SuccessStatus>(null);
+  const [formErrorStatus, setFormErrorStatus] = useState<FormErrorStatus>(null);
+  const [activeToast, setActiveToast] = useState<ToastState>(null);
+
   const successTimeoutRef = useRef<number | null>(null);
+  const toastTimeoutRef = useRef<number | null>(null);
+
+  const showToast = (toastState: ToastState) => {
+    if (toastTimeoutRef.current !== null) {
+      window.clearTimeout(toastTimeoutRef.current);
+    }
+    setActiveToast(toastState);
+    toastTimeoutRef.current = window.setTimeout(() => {
+      setActiveToast(null);
+      toastTimeoutRef.current = null;
+    }, 4000);
+  };
+
+  const handleLanguageChange = (newLang: Language) => {
+    setLanguage(newLang);
+    localStorage.setItem('nest_lang', newLang);
+    showToast({ type: 'langChanged', langCode: newLang });
+  };
+
+  // Reactively derived banners based on current t (switches instantly on language change)
+  const displayedSuccessMessage = useMemo(() => {
+    if (successStatus === 'new') return t.regSuccessMessage;
+    if (successStatus === 'duplicate') return t.alreadyExistsMessage;
+    return null;
+  }, [successStatus, t]);
+
+  const displayedFormError = useMemo(() => {
+    if (formErrorStatus === 'enterName') return t.enterNameError;
+    if (formErrorStatus === 'enterMobile') return t.enterMobileError;
+    if (formErrorStatus === 'cityRequired') return t.cityRequiredError;
+    if (formErrorStatus === 'areaRequired') return t.areaRequiredError;
+    if (formErrorStatus === 'failed') return t.regFailedError;
+    if (formErrorStatus === 'network') return t.networkError;
+    return null;
+  }, [formErrorStatus, t]);
+
+  const displayedToast = useMemo(() => {
+    if (!activeToast) return null;
+    switch (activeToast.type) {
+      case 'langChanged': {
+        const langMeta = LANGUAGE_LIST.find((l) => l.code === activeToast.langCode);
+        return `${t.languageChangedToast} ${langMeta ? `${langMeta.nativeName} (${langMeta.englishName})` : activeToast.langCode}`;
+      }
+      case 'successNew':
+        return t.regSuccessMessage;
+      case 'duplicate':
+        return t.alreadyExistsMessage;
+      case 'enterName':
+        return t.enterNameError;
+      case 'enterMobile':
+        return t.enterMobileError;
+      case 'cityRequired':
+        return t.cityRequiredError;
+      case 'areaRequired':
+        return t.areaRequiredError;
+      case 'failed':
+        return t.regFailedError;
+      case 'network':
+        return t.networkError;
+      case 'custom':
+        return activeToast.text;
+      default:
+        return null;
+    }
+  }, [activeToast, t]);
 
   // Clean up timers on unmount
   useEffect(() => {
     return () => {
       if (successTimeoutRef.current !== null) {
         window.clearTimeout(successTimeoutRef.current);
+      }
+      if (toastTimeoutRef.current !== null) {
+        window.clearTimeout(toastTimeoutRef.current);
       }
     };
   }, []);
@@ -200,23 +242,13 @@ export const App: React.FC = () => {
     };
   }, []);
 
-  // Toast Notification State
-  const [toast, setToast] = useState<string | null>(null);
-
-  const showToast = (message: string) => {
-    setToast(message);
-    setTimeout(() => {
-      setToast(null);
-    }, 4000);
-  };
-
-  const currentCityData = CITIES_DATA.find((c) => c.id === city) || CITIES_DATA[0];
+  const currentCityData = CITIES_DATA.find((c) => c.id === city);
 
   const handleCityChange = (newCityId: string) => {
     setCity(newCityId);
-    const targetCity = CITIES_DATA.find((c) => c.id === newCityId) || CITIES_DATA[0];
-    if (targetCity.localities.length > 0) {
-      setLocality(targetCity.localities[0].id);
+    setLocality('');
+    if (newCityId) {
+      clearFieldError('city');
     }
   };
 
@@ -225,51 +257,73 @@ export const App: React.FC = () => {
     label: getCityLabel(c, language)
   }));
 
-  const localityOptions = currentCityData.localities.map((loc) => ({
-    value: loc.id,
-    label: getLocalityLabel(loc, language)
-  }));
+  const localityOptions = currentCityData
+    ? currentCityData.localities.map((loc) => ({
+        value: loc.id,
+        label: getLocalityLabel(loc, language)
+      }))
+    : [];
 
   const handleRegisterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isSubmitting || successMessage) return;
+    if (isSubmitting || successStatus) return;
 
     if (successTimeoutRef.current !== null) {
       window.clearTimeout(successTimeoutRef.current);
       successTimeoutRef.current = null;
     }
 
-    setFormError(null);
-    setSuccessMessage(null);
+    setFormErrorStatus(null);
+    setSuccessStatus(null);
 
     const trimmedName = fullName.trim();
     const cleanMobile = mobileNumber.replace(/\D/g, '');
 
-    // Form Validation
+    // Form Validation for all required fields
+    const newErrors: {
+      name?: boolean;
+      mobile?: boolean;
+      city?: boolean;
+      area?: boolean;
+      chores?: boolean;
+      gender?: boolean;
+    } = {};
+
     if (!trimmedName) {
-      const err = t.enterNameError || 'Please enter your full name.';
-      setFormError(err);
-      showToast(err);
-      return;
+      newErrors.name = true;
     }
-
     if (cleanMobile.length !== 10) {
-      const err = t.enterMobileError || 'Please enter a valid 10-digit Indian mobile number.';
-      setFormError(err);
-      showToast(err);
+      newErrors.mobile = true;
+    }
+    if (!city) {
+      newErrors.city = true;
+    }
+    if (!locality) {
+      newErrors.area = true;
+    }
+    if (!choresWillingness) {
+      newErrors.chores = true;
+    }
+    if (!gender) {
+      newErrors.gender = true;
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setFieldErrors(newErrors);
       return;
     }
 
+    setFieldErrors({});
     setIsSubmitting(true);
 
     try {
       const payload = {
         name: trimmedName,
         mobilenumber: cleanMobile,
-        city: city,
-        area: locality,
-        gender: gender === 'female' ? 'Female' : gender === 'male' ? 'Male' : 'Other',
-        interest: choresWillingness === 'yes' ? 'Yes' : 'No',
+        city: city || 'Bengaluru',
+        area: locality || (currentCityData?.localities[0]?.id || 'Bellandur'),
+        gender: gender === 'female' ? 'Female' : gender === 'male' ? 'Male' : gender === 'other' ? 'Other' : 'Female',
+        interest: choresWillingness === 'no' ? 'No' : 'Yes',
         status: true
       };
 
@@ -283,34 +337,45 @@ export const App: React.FC = () => {
 
       const data = await response.json().catch(() => null);
 
-      if (response.ok && data && data.success === true) {
-        const succMsg = data.message || 'Registration submitted successfully! Thank you for your interest in Nest Services.';
-        setSuccessMessage(succMsg);
-        setFormError(null);
-        confetti({
-          particleCount: 90,
-          spread: 70,
-          origin: { y: 0.6 },
-          colors: ['#7E22CE', '#FFD43B', '#10B981', '#F59E0B']
-        });
-        showToast(succMsg);
+      if (response.ok && data && (data.success === true || data.alreadyExists === true)) {
+        if (data.alreadyExists === true) {
+          setSuccessStatus('duplicate');
+          setFormErrorStatus(null);
+          showToast({ type: 'duplicate' });
 
-        // Automatically dismiss success message after 3 seconds, reset form fields & restore Register Now button
-        successTimeoutRef.current = window.setTimeout(() => {
-          setSuccessMessage(null);
-          setFullName('');
-          setMobileNumber('');
-          successTimeoutRef.current = null;
-        }, 3000);
+          // For duplicate registrations, preserve the entered details
+          successTimeoutRef.current = window.setTimeout(() => {
+            setSuccessStatus(null);
+            setActiveToast(null);
+            successTimeoutRef.current = null;
+          }, 3500);
+        } else {
+          // Genuinely new registration
+          setSuccessStatus('new');
+          setFormErrorStatus(null);
+          showToast({ type: 'successNew' });
+
+          // Automatically dismiss success message after 3–4 seconds, reset all form fields to initial state & restore Register Now button
+          successTimeoutRef.current = window.setTimeout(() => {
+            setSuccessStatus(null);
+            setActiveToast(null);
+            setFullName('');
+            setMobileNumber('');
+            setCity('');
+            setLocality('');
+            setGender('');
+            setChoresWillingness('');
+            setFieldErrors({});
+            successTimeoutRef.current = null;
+          }, 3500);
+        }
       } else {
-        const errorMsg = data?.message || 'Registration failed. Please verify your information and try again.';
-        setFormError(errorMsg);
-        showToast(errorMsg);
+        setFormErrorStatus('failed');
+        showToast({ type: 'failed' });
       }
     } catch (err) {
-      const networkMsg = 'Unable to connect to the server. Please check your internet connection and try again.';
-      setFormError(networkMsg);
-      showToast(networkMsg);
+      setFormErrorStatus('network');
+      showToast({ type: 'network' });
     } finally {
       setIsSubmitting(false);
     }
@@ -333,10 +398,10 @@ export const App: React.FC = () => {
   return (
     <div className="site-page-container">
       {/* Toast Notification */}
-      {toast && (
+      {displayedToast && (
         <div className="toast-notification-banner" role="status" aria-live="polite">
           <CheckCircle2 size={18} color="#10B981" />
-          <span>{toast}</span>
+          <span>{displayedToast}</span>
         </div>
       )}
 
@@ -362,6 +427,7 @@ export const App: React.FC = () => {
             <LanguageDropdown
               currentLanguage={language}
               onSelectLanguage={handleLanguageChange}
+              headerHint={t.selectLanguageHeader}
             />
           </div>
         </div>
@@ -426,7 +492,7 @@ export const App: React.FC = () => {
             <div className="hero-right-visual-col">
               <div className="hero-visual-relative-wrapper">
                 <div className="doodle-handwritten-hero" style={{ whiteSpace: 'pre-line' }}>
-                  {t.doodleHero}
+                  {translations.en.doodleHero}
                 </div>
                 
                 <div className="hero-visual-card-frame">
@@ -501,16 +567,16 @@ export const App: React.FC = () => {
                 </div>
               </div>
 
-              {formError && (
+              {displayedFormError && (
                 <div className="form-error-alert-banner" role="alert">
-                  {formError}
+                  {displayedFormError}
                 </div>
               )}
 
-              {successMessage && (
+              {displayedSuccessMessage && (
                 <div className="form-success-alert-banner" role="status">
                   <CheckCircle2 size={18} color="#10B981" />
-                  <span>{successMessage}</span>
+                  <span>{displayedSuccessMessage}</span>
                 </div>
               )}
 
@@ -526,14 +592,27 @@ export const App: React.FC = () => {
                       <input
                         id="reg-fullname"
                         type="text"
-                        className="custom-input-box"
+                        className={`custom-input-box ${fieldErrors.name ? 'has-error' : ''}`}
                         placeholder={t.fullNamePlaceholder}
                         value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setFullName(val);
+                          if (val.trim()) {
+                            clearFieldError('name');
+                          }
+                        }}
+                        aria-invalid={fieldErrors.name ? 'true' : 'false'}
+                        aria-describedby={fieldErrors.name ? 'reg-fullname-error' : undefined}
                         required
-                        disabled={isSubmitting || !!successMessage}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       />
                     </div>
+                    {fieldErrors.name && (
+                      <span className="field-error-text" id="reg-fullname-error" role="alert">
+                        {t.enterNameError}
+                      </span>
+                    )}
                   </div>
 
                   {/* Mobile Number */}
@@ -543,19 +622,31 @@ export const App: React.FC = () => {
                       <span>{t.mobileNumberLabel}</span>
                     </label>
                     <div className="input-with-icon-wrap">
-                      <div className="phone-prefix-tag">+91</div>
                       <input
                         id="reg-mobile"
                         type="tel"
-                        className="custom-input-box input-has-prefix"
+                        className={`custom-input-box ${fieldErrors.mobile ? 'has-error' : ''}`}
                         placeholder={t.mobileNumberPlaceholder}
                         maxLength={10}
                         value={mobileNumber}
-                        onChange={(e) => setMobileNumber(e.target.value.replace(/\D/g, ''))}
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/\D/g, '');
+                          setMobileNumber(val);
+                          if (val.length === 10) {
+                            clearFieldError('mobile');
+                          }
+                        }}
+                        aria-invalid={fieldErrors.mobile ? 'true' : 'false'}
+                        aria-describedby={fieldErrors.mobile ? 'reg-mobile-error' : undefined}
                         required
-                        disabled={isSubmitting || !!successMessage}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       />
                     </div>
+                    {fieldErrors.mobile && (
+                      <span className="field-error-text" id="reg-mobile-error" role="alert">
+                        {t.enterMobileError}
+                      </span>
+                    )}
                   </div>
 
                   {/* City Dropdown with Bilingual Label (Matches Reference Image 3) */}
@@ -568,10 +659,16 @@ export const App: React.FC = () => {
                       id="reg-city"
                       value={city}
                       options={cityOptions}
-                      placeholder={t.cityLabel}
+                      placeholder={t.selectCityPlaceholder}
                       onChange={handleCityChange}
-                      disabled={isSubmitting || !!successMessage}
+                      hasError={!!fieldErrors.city}
+                      disabled={isSubmitting || !!displayedSuccessMessage}
                     />
+                    {fieldErrors.city && (
+                      <span className="field-error-text" id="reg-city-error" role="alert">
+                        {t.cityRequiredError}
+                      </span>
+                    )}
                   </div>
 
                   {/* Area / Locality Dropdown with Bilingual Label */}
@@ -584,10 +681,21 @@ export const App: React.FC = () => {
                       id="reg-locality"
                       value={locality}
                       options={localityOptions}
-                      placeholder={t.areaLabel}
-                      onChange={(newLoc) => setLocality(newLoc)}
-                      disabled={isSubmitting || !!successMessage}
+                      placeholder={city ? t.selectAreaPlaceholder : t.firstSelectCityPlaceholder}
+                      onChange={(newLoc) => {
+                        setLocality(newLoc);
+                        if (newLoc) {
+                          clearFieldError('area');
+                        }
+                      }}
+                      hasError={!!fieldErrors.area}
+                      disabled={!city || isSubmitting || !!displayedSuccessMessage}
                     />
+                    {fieldErrors.area && (
+                      <span className="field-error-text" id="reg-locality-error" role="alert">
+                        {t.areaRequiredError}
+                      </span>
+                    )}
                   </div>
 
                   {/* Household Chores Willingness */}
@@ -596,24 +704,35 @@ export const App: React.FC = () => {
                       <HelpCircle size={14} color="#7E22CE" />
                       <span>{t.householdChoresLabel}</span>
                     </label>
-                    <div className="segmented-chips-row">
+                    <div className={`segmented-chips-row ${fieldErrors.chores ? 'has-error' : ''}`}>
                       <button
                         type="button"
                         className={`segmented-chip-btn ${choresWillingness === 'yes' ? 'active' : ''}`}
-                        onClick={() => setChoresWillingness('yes')}
-                        disabled={isSubmitting || !!successMessage}
+                        onClick={() => {
+                          setChoresWillingness('yes');
+                          clearFieldError('chores');
+                        }}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       >
                         <span>{t.choresYes}</span>
                       </button>
                       <button
                         type="button"
                         className={`segmented-chip-btn ${choresWillingness === 'no' ? 'active' : ''}`}
-                        onClick={() => setChoresWillingness('no')}
-                        disabled={isSubmitting || !!successMessage}
+                        onClick={() => {
+                          setChoresWillingness('no');
+                          clearFieldError('chores');
+                        }}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       >
                         <span>{t.choresNo}</span>
                       </button>
                     </div>
+                    {fieldErrors.chores && (
+                      <span className="field-error-text" id="reg-chores-error" role="alert">
+                        {t.choresRequiredError}
+                      </span>
+                    )}
                   </div>
 
                   {/* Gender Selector */}
@@ -622,32 +741,46 @@ export const App: React.FC = () => {
                       <User size={14} color="#7E22CE" />
                       <span>{t.genderLabel}</span>
                     </label>
-                    <div className="segmented-chips-row">
+                    <div className={`segmented-chips-row ${fieldErrors.gender ? 'has-error' : ''}`}>
                       <button
                         type="button"
                         className={`segmented-chip-btn ${gender === 'female' ? 'active' : ''}`}
-                        onClick={() => setGender('female')}
-                        disabled={isSubmitting || !!successMessage}
+                        onClick={() => {
+                          setGender('female');
+                          clearFieldError('gender');
+                        }}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       >
                         <span>{t.genderFemale}</span>
                       </button>
                       <button
                         type="button"
                         className={`segmented-chip-btn ${gender === 'male' ? 'active' : ''}`}
-                        onClick={() => setGender('male')}
-                        disabled={isSubmitting || !!successMessage}
+                        onClick={() => {
+                          setGender('male');
+                          clearFieldError('gender');
+                        }}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       >
                         <span>{t.genderMale}</span>
                       </button>
                       <button
                         type="button"
                         className={`segmented-chip-btn ${gender === 'other' ? 'active' : ''}`}
-                        onClick={() => setGender('other')}
-                        disabled={isSubmitting || !!successMessage}
+                        onClick={() => {
+                          setGender('other');
+                          clearFieldError('gender');
+                        }}
+                        disabled={isSubmitting || !!displayedSuccessMessage}
                       >
                         <span>{t.genderOther}</span>
                       </button>
                     </div>
+                    {fieldErrors.gender && (
+                      <span className="field-error-text" id="reg-gender-error" role="alert">
+                        {t.genderRequiredError}
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -655,7 +788,7 @@ export const App: React.FC = () => {
                 <button 
                   type="submit" 
                   className="btn-register-now-yellow" 
-                  disabled={isSubmitting || !!successMessage}
+                  disabled={isSubmitting || !!displayedSuccessMessage}
                 >
                   <span>{isSubmitting ? t.registeringBtn : t.registerNowBtn}</span>
                   <ArrowRight size={18} />
@@ -884,7 +1017,7 @@ export const App: React.FC = () => {
           <div className="testimonials-marquee-viewport">
             <div className="testimonials-marquee-track">
               {/* Set 1: Real Partner Employee Testimonials */}
-              {EMPLOYEE_STORIES.map((story, idx) => (
+              {employeeStories.map((story, idx) => (
                 <div key={`story-1-${idx}`} className="expert-testimonial-card marquee-card">
                   <p className="quote-text-italic">
                     "{story.quote}"
@@ -905,7 +1038,7 @@ export const App: React.FC = () => {
               ))}
 
               {/* Set 2: Duplicate Set of 8 Boxes for 100% Seamless Infinite Loop */}
-              {EMPLOYEE_STORIES.map((story, idx) => (
+              {employeeStories.map((story, idx) => (
                 <div key={`story-2-${idx}`} className="expert-testimonial-card marquee-card" aria-hidden="true">
                   <p className="quote-text-italic">
                     "{story.quote}"

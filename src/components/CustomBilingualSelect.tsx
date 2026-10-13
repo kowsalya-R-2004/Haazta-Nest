@@ -14,6 +14,7 @@ interface CustomBilingualSelectProps {
   placeholder?: string;
   onChange: (value: string) => void;
   disabled?: boolean;
+  hasError?: boolean;
 }
 
 export const CustomBilingualSelect: React.FC<CustomBilingualSelectProps> = ({
@@ -22,7 +23,8 @@ export const CustomBilingualSelect: React.FC<CustomBilingualSelectProps> = ({
   options,
   placeholder = 'Select option',
   onChange,
-  disabled = false
+  disabled = false,
+  hasError = false
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,11 +70,12 @@ export const CustomBilingualSelect: React.FC<CustomBilingualSelectProps> = ({
       <button
         type="button"
         id={`${id}-trigger`}
-        className={`custom-select-trigger ${isOpen ? 'active-open' : ''} ${disabled ? 'disabled' : ''}`}
+        className={`custom-select-trigger ${isOpen ? 'active-open' : ''} ${disabled ? 'disabled' : ''} ${hasError ? 'has-error' : ''}`}
         onClick={() => !disabled && setIsOpen((prev) => !prev)}
         onKeyDown={handleKeyDown}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
+        aria-invalid={hasError ? 'true' : 'false'}
         disabled={disabled}
       >
         <span className={`trigger-display-text ${!selectedOption ? 'placeholder' : ''}`}>
