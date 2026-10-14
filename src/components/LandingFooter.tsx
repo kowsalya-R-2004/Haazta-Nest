@@ -25,7 +25,7 @@ export const LandingFooter: React.FC = () => {
         </div>
 
         <div style={{ borderTop: '1px solid #1F2937', paddingTop: '16px', fontSize: '11px', color: '#6B7280' }}>
-          © 2026 Nest Home Services by Haatza. All rights reserved.
+          © 2026 Haatza India Private Limited. All rights reserved.
         </div>
       </div>
     </footer>

@@ -46,7 +46,7 @@ const STORIES_BY_LANG: Record<Language, RawStoryItem[]> = {
       id: 'rita-chetry',
       name: 'Rita Chetry',
       category: 'Cooking & Kitchen Care Expert • Bengaluru',
-      quote: 'With Nest Services, my payments are transferred directly to my bank account every week without delay. Everything is clear, transparent, and hassle-free.'
+      quote: 'With Haatza Nest Experts, my payments are transferred directly to my bank account every week without delay. Everything is clear, transparent, and hassle-free.'
     },
     {
       id: 'joymoti-bhor',
@@ -58,7 +58,7 @@ const STORIES_BY_LANG: Record<Language, RawStoryItem[]> = {
       id: 'sabita-newar',
       name: 'Sabita Newar',
       category: 'Deep Cleaning Specialist • Bengaluru',
-      quote: 'Joining was 100% free with no brokerage fees. Nest provided high-quality uniforms and safety training that makes us feel proud every day.'
+      quote: 'Joining was 100% free with no brokerage fees. Haatza Nest provided high-quality uniforms and safety training that makes us feel proud every day.'
     },
     {
       id: 'karmi-hansdah',
@@ -82,7 +82,7 @@ const STORIES_BY_LANG: Record<Language, RawStoryItem[]> = {
       id: 'jali-shil',
       name: 'Jali Shil',
       category: 'Housekeeping & Sanitization Expert • Bengaluru',
-      quote: 'Nest Services gave me steady work opportunities close to my home. Getting regular bookings and transparent earnings transformed my confidence.'
+      quote: 'Haatza Nest Experts gave me steady work opportunities close to my home. Getting regular bookings and transparent earnings transformed my confidence.'
     }
   ],
 

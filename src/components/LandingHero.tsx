@@ -71,7 +71,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({ onSuccess }) => {
 
         {/* Main Headline */}
         <h1 className="hero-title">
-          Become a Nest Expert and earn up to <br />
+          Become a Haatza Nest Expert and earn up to <br />
           <span style={{ color: '#6F1D9E' }}>₹45,000 per month.</span>
         </h1>
 

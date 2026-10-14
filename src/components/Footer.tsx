@@ -101,7 +101,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Footer Bottom Copyright */}
         <div className="footer-bottom-bar">
           <div>
-            © 2026 Nest Home Services by Haatza. All rights reserved.
+            © 2026 Haatza India Private Limited. All rights reserved.
           </div>
           <div style={{ display: 'flex', gap: '20px' }}>
             <span className="footer-link">Privacy Policy</span>

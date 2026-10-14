@@ -414,7 +414,7 @@ export const App: React.FC = () => {
       >
         <div className="layout-content-wrap">
           <div className="top-lang-nav-inner">
-            {/* Top Left Nest Services Brand Header */}
+            {/* Top Left Haatza Nest Experts Brand Header */}
             <div className="top-navbar-brand-header">
               <img
                 src={logoImg}
@@ -480,7 +480,7 @@ export const App: React.FC = () => {
                   type="button" 
                   className="btn-hero-join-now"
                   onClick={scrollToRegistration}
-                  aria-label="Join Nest Services"
+                  aria-label="Join Haatza Nest Experts"
                 >
                   <span>{t.joinNow}</span>
                   <ArrowRight size={17} />
@@ -849,9 +849,9 @@ export const App: React.FC = () => {
       </section>
 
       {/* =========================================================================
-          4. BENEFITS OF JOINING NEST (6 BENEFIT CARDS)
+          4. BENEFITS OF JOINING HAATZA NEST (6 BENEFIT CARDS)
           ========================================================================= */}
-      <section className="section-padding-wrap" id="benefits" aria-label="Benefits of Joining Nest">
+      <section className="section-padding-wrap" id="benefits" aria-label="Benefits of Joining Haatza Nest">
         <div className="layout-content-wrap">
           <div className="section-header-block">
             <h2 className="section-title-bold">{t.benefitsTitle}</h2>
@@ -917,9 +917,9 @@ export const App: React.FC = () => {
       </section>
 
       {/* =========================================================================
-          5. WHY EXPERTS TRUST NEST SERVICES (4 CARDS)
+          5. WHY EXPERTS TRUST HAATZA NEST EXPERTS (4 CARDS)
           ========================================================================= */}
-      <section className="section-padding-wrap bg-soft-lavender-section" id="why-trust" aria-label="Why Experts Trust Nest Services">
+      <section className="section-padding-wrap bg-soft-lavender-section" id="why-trust" aria-label="Why Experts Trust Haatza Nest Experts">
         <div className="layout-content-wrap">
           <div className="section-header-block">
             <h2 className="section-title-bold">{t.whyTrustTitle}</h2>
@@ -1261,7 +1261,7 @@ export const App: React.FC = () => {
 
             {/* Copyright & Bengaluru Signature */}
             <div className="footer-clean-copyright">
-              <span>© {new Date().getFullYear()} {t.brandName}.</span>
+              <span>{t.copyrightText}</span>
               <span>•</span>
               <span>{t.builtInBlr}</span>
             </div>

@@ -83,7 +83,7 @@ export const HeroRegistrationSection: React.FC<RegistrationFormProps> = ({ onFor
           </div>
 
           <h1 className="hero-main-heading" style={{ fontSize: '42px', marginBottom: '12px' }}>
-            Become a Nest Expert and earn up to <br />
+            Become a Haatza Nest Expert and earn up to <br />
             <span style={{ color: '#6F1D9E', background: 'linear-gradient(90deg, #6F1D9E 0%, #8A2BE2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               ₹45,000 per month.
             </span>

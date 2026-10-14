@@ -113,7 +113,7 @@ export interface Translations {
   benefit6Title: string;
   benefit6Desc: string;
 
-  // Why Experts Trust Nest Services (4 Cards)
+  // Why Experts Trust Haatza Nest Experts (4 Cards)
   whyTrustTitle: string;
   whyTrustSubtitle: string;
   trust1Title: string;
@@ -188,10 +188,11 @@ export interface Translations {
   freeJoiningPill: string;
   verifiedPlatformPill: string;
   builtInBlr: string;
+  copyrightText: string;
 }
 
 const en: Translations = {
-  brandName: "Nest Services",
+  brandName: "Haatza Nest Experts",
   brandTagline: "Trusted People. Happier Homes.",
   selectLanguage: "Language",
   selectLanguageHeader: "Select Language / भाषा चुनें",
@@ -201,15 +202,15 @@ const en: Translations = {
   heroHeadline1: "Find Meaningful",
   heroHeadline2: "Work & Make a",
   heroHeadlineHighlight: "Better Tomorrow",
-  heroDescription: "Join Nest Services and become a home-service expert. Build your skills, connect with customers in your area, and grow your professional career.",
+  heroDescription: "Join Haatza Nest Experts and become a home-service expert. Build your skills, connect with customers in your area, and grow your professional career.",
   trustedPlatform: "Trusted Platform",
   flexibleOpportunities: "Flexible Work Opportunities",
   professionalGrowth: "Professional Growth",
   joinNow: "Join Now",
   doodleHero: "Skilled People\nBuild Better Homes ⤷",
   womenOnlyProgram: "Empowering Women Through Trusted Career Opportunities",
-  registerTitle: "Become a Nest Service Expert",
-  registerSubtitle: "Fill in your basic details to begin your journey with Nest Services.",
+  registerTitle: "Become a Haatza Nest Expert",
+  registerSubtitle: "Fill in your basic details to begin your journey with Haatza Nest Experts.",
   inviteNamaste: "Join our home-services expert team",
   fullNameLabel: "Full Name *",
   fullNamePlaceholder: "Enter your full name",
@@ -239,7 +240,7 @@ const en: Translations = {
   areaRequiredError: "Please select your area / locality.",
   choresRequiredError: "Please select your household chores preference.",
   genderRequiredError: "Please select your gender.",
-  welcomePartner: "Welcome to Nest Services",
+  welcomePartner: "Welcome to Haatza Nest Experts",
   regSuccessMessage: "Registration completed successfully",
   regSuccessDesc: "Your registration details have been received. Our partner onboarding team will contact you regarding next steps.",
   alreadyExistsMessage: "Request already received. Our team will get back to you soon.",
@@ -247,14 +248,14 @@ const en: Translations = {
   networkError: "Unable to connect to the server. Please check your internet connection and try again.",
   regAnotherPerson: "Register another person",
   howItWorksTitle: "How It Works",
-  howItWorksSubtitle: "Three simple steps to start providing services with Nest.",
+  howItWorksSubtitle: "Three simple steps to start providing services with Haatza Nest.",
   step1Title: "Step 1 — Register",
   step1Desc: "Share your basic details and tell us which household services you can provide.",
   step2Title: "Step 2 — Training & Verification",
   step2Desc: "Complete the applicable onboarding, training, and identity verification requirements.",
   step3Title: "Step 3 — Accept Bookings & Grow",
   step3Desc: "Connect with customers, manage service requests, deliver quality work, and build your professional reputation.",
-  benefitsTitle: "Benefits of Joining Nest",
+  benefitsTitle: "Benefits of Joining Haatza Nest",
   benefitsSubtitle: "Explore opportunities designed for professional development, flexibility, and steady connection with customers.",
   benefit1Title: "Flexible Work Opportunities",
   benefit1Desc: "Explore instant and scheduled service opportunities based on your availability.",
@@ -268,7 +269,7 @@ const en: Translations = {
   benefit5Desc: "Showcase your skills and build relationships with customers through reliable service.",
   benefit6Title: "Career Growth",
   benefit6Desc: "Build your experience, strengthen your professional reputation, and explore future opportunities.",
-  whyTrustTitle: "Why Experts Trust Nest Services",
+  whyTrustTitle: "Why Experts Choose Haatza Nest",
   whyTrustSubtitle: "Built around professional skills, reliable service, safety, and opportunities for growth.",
   trust1Title: "Verified Professionals",
   trust1Desc: "Support customer confidence through an appropriate identity and verification process.",
@@ -298,13 +299,13 @@ const en: Translations = {
   story4Author: "Kavita M.",
   story4Category: "Kitchen & Bathroom Care",
   faqsTitle: "Frequently Asked Questions",
-  faqsSubtitle: "Find answers to common questions about joining Nest Services as an expert.",
-  faq1Q: "How do I join Nest Services?",
+  faqsSubtitle: "Find answers to common questions about joining Haatza Nest Experts as an expert.",
+  faq1Q: "How do I join Haatza Nest Experts?",
   faq1A: "You can submit your basic information through the registration form on this page. Our partner onboarding team reviews submissions and guides applicants through the orientation and verification process.",
   faq2Q: "Do I need previous experience?",
   faq2A: "Prior domestic service experience is valued, but structured training on service checklists, hygiene protocols, and respectful customer communication is provided as part of onboarding.",
   faq3Q: "What household services can I provide?",
-  faq3A: "Nest Services covers household chores including floor mopping and dusting, meal assistance and kitchen prep, bathroom cleaning, kitchen cleaning, and laundry services.",
+  faq3A: "Haatza Nest Experts covers household chores including floor mopping and dusting, meal assistance and kitchen prep, bathroom cleaning, kitchen cleaning, and laundry services.",
   faq4Q: "How do instant and scheduled bookings work?",
   faq4A: "Instant bookings allow available experts nearby to accept immediate customer requests, while scheduled bookings let you plan sessions booked in advance for designated time windows.",
   faq5Q: "What documents are required?",
@@ -314,8 +315,8 @@ const en: Translations = {
   faq7Q: "Are working hours fixed?",
   faq7A: "No, working hours are flexible. You can declare your availability for morning, afternoon, or full-day sessions according to your personal routine.",
   faq8Q: "Is there a registration fee?",
-  faq8A: "There is no registration fee charged to apply as an expert partner with Nest Services. Any onboarding materials and basic training guidelines are provided during orientation.",
-  ctaHeading: "Join Nest Services Today",
+  faq8A: "There is no registration fee charged to apply as an expert partner with Haatza Nest Experts. Any onboarding materials and basic training guidelines are provided during orientation.",
+  ctaHeading: "Join Haatza Nest Expert Today",
   ctaSub: "Take the next step towards developing your skills, connecting with customers, and building your professional future.",
   ctaButton: "Register Now",
   footerTagline: "Your Skills. Your Growth. Your Opportunity",
@@ -331,7 +332,8 @@ const en: Translations = {
   backToTop: "Back to Top ↑",
   freeJoiningPill: "100% Free Joining • No Brokerage",
   verifiedPlatformPill: "Verified & Safe Platform",
-  builtInBlr: "Built with 💜 in Bengaluru"
+  builtInBlr: "Built with 💜 in Bengaluru",
+  copyrightText: "© 2026 Haatza India Private Limited. All rights reserved."
 };
 
 const kn: Translations = {
@@ -475,7 +477,8 @@ const kn: Translations = {
   backToTop: "ಮೇಲಕ್ಕೆ ಹೋಗಿ ↑",
   freeJoiningPill: "100% ಉಚಿತ ನೋಂದಣಿ • ಶುಲ್ಕವಿಲ್ಲ",
   verifiedPlatformPill: "ಸುರಕ್ಷಿತ & ವಿಶ್ವಾಸಾರ್ಹ",
-  builtInBlr: "ಬೆಂಗಳೂರಿನಲ್ಲಿ 💜 ಪ್ರೀತಿಯಿಂದ ನಿರ್ಮಿಸಲಾಗಿದೆ"
+  builtInBlr: "ಬೆಂಗಳೂರಿನಲ್ಲಿ 💜 ಪ್ರೀತಿಯಿಂದ ನಿರ್ಮಿಸಲಾಗಿದೆ",
+  copyrightText: "© 2026 ಹಾಟ್ಜಾ ಇಂಡಿಯಾ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್. ಸರ್ವ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
 };
 
 const hi: Translations = {
@@ -619,7 +622,8 @@ const hi: Translations = {
   backToTop: "वापस ऊपर जाएं ↑",
   freeJoiningPill: "100% मुफ्त पंजीकरण • कोई एजेंट फीस नहीं",
   verifiedPlatformPill: "सत्यापित और सुरक्षित प्लेटफॉर्म",
-  builtInBlr: "बेंगलुरु में 💜 से निर्मित"
+  builtInBlr: "बेंगलुरु में 💜 से निर्मित",
+  copyrightText: "© 2026 हात्झा इंडिया प्राइवेट लिमिटेड। सर्वाधिकार सुरक्षित।"
 };
 
 const ta: Translations = {
@@ -763,7 +767,8 @@ const ta: Translations = {
   backToTop: "மேலே செல்லவும் ↑",
   freeJoiningPill: "100% இலவச பதிவு • கட்டணம் இல்லை",
   verifiedPlatformPill: "பாதுகாப்பான மற்றும் சரிபார்க்கப்பட்ட தளம்",
-  builtInBlr: "பெங்களூரில் 💜 உடன் உருவாக்கப்பட்டது"
+  builtInBlr: "பெங்களூரில் 💜 உடன் உருவாக்கப்பட்டது",
+  copyrightText: "© 2026 ஹாட்சா இந்தியா பிரைவேட் லிமிடெட். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
 };
 
 const te: Translations = {
@@ -907,7 +912,8 @@ const te: Translations = {
   backToTop: "పైకి వెళ్లండి ↑",
   freeJoiningPill: "100% ఉచిత చేరిక • ఎలాంటి రుసుము లేదు",
   verifiedPlatformPill: "సురక్షితమైన మరియు ధృవీకరించబడిన వేదిక",
-  builtInBlr: "బెంగళూరులో 💜 తో నిర్మించబడింది"
+  builtInBlr: "బెంగళూరులో 💜 తో నిర్మించబడింది",
+  copyrightText: "© 2026 హాట్జా ఇండియా ప్రైవేట్ లిమిటెడ్. సర్వ హక్కులు ప్రత్యేకించబడ్డాయి."
 };
 
 const bn: Translations = {
@@ -1051,7 +1057,8 @@ const bn: Translations = {
   backToTop: "উপরে যান ↑",
   freeJoiningPill: "১০০% বিনামূল্যে যোগদান • কোনো ফি নেই",
   verifiedPlatformPill: "যাচাইকৃত ও নিরাপদ প্ল্যাটফর্ম",
-  builtInBlr: "বেঙ্গালুরুতে 💜 দিয়ে নির্মিত"
+  builtInBlr: "বেঙ্গালুরুতে 💜 দিয়ে নির্মিত",
+  copyrightText: "© 2026 হাতজা ইন্ডিয়া প্রাইভেট লিমিটেড। সর্বস্বত্ব সংরক্ষিত।"
 };
 
 const mr: Translations = {
@@ -1195,11 +1202,12 @@ const mr: Translations = {
   backToTop: "वर जा ↑",
   freeJoiningPill: "१००% मोफत नोंदणी • कोणतेही शुल्क नाही",
   verifiedPlatformPill: "सत्यापित आणि सुरक्षित प्लॅटफॉर्म",
-  builtInBlr: "बेंगळुरूमध्ये 💜 ने निर्मित"
+  builtInBlr: "बेंगळुरूमध्ये 💜 ने निर्मित",
+  copyrightText: "© 2026 हात्झा इंडिया प्रायव्हेट लिमिटेड. सर्व हक्क राखीव."
 };
 
 const ml: Translations = {
-  brandName: "Nest Services",
+  brandName: "Haatza Nest Experts",
   brandTagline: "വിശ്വസ്തരായ ആളുകൾ. സന്തുഷ്ടമായ വീടുകൾ.",
   selectLanguage: "ഭാഷ",
   selectLanguageHeader: "ഭാഷ തിരഞ്ഞെടുക്കുക / Select Language",
@@ -1339,11 +1347,12 @@ const ml: Translations = {
   backToTop: "മുകളിലേക്ക് പോകുക ↑",
   freeJoiningPill: "100% സൗജന്യ രജിസ്ട്രേഷൻ • ഫീസ് ഇല്ല",
   verifiedPlatformPill: "സുരക്ഷിതവും പരിശോധിച്ചുറപ്പിച്ചതുമായ പ്ലാറ്റ്‌ഫോം",
-  builtInBlr: "ബെംഗളൂരുവിൽ 💜 നിർമ്മിച്ചത്"
+  builtInBlr: "ബെംഗളൂരുവിൽ 💜 നിർമ്മിച്ചത്",
+  copyrightText: "© 2026 ഹാറ്റ്സ ഇന്ത്യ പ്രൈവറ്റ് ലിമിറ്റഡ്. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം."
 };
 
 const gu: Translations = {
-  brandName: "Nest Services",
+  brandName: "Haatza Nest Experts",
   brandTagline: "વિશ્વસનીય લોકો. સુખી ઘરો.",
   selectLanguage: "ભાષા",
   selectLanguageHeader: "ભાષા પસંદ કરો / Select Language",
@@ -1483,11 +1492,12 @@ const gu: Translations = {
   backToTop: "ઉપર જાઓ ↑",
   freeJoiningPill: "૧૦૦% મફત નોંધણી • કોઈ ફી નથી",
   verifiedPlatformPill: "ચકાસાયેલ અને સુરક્ષિત પ્લેટફોર્મ",
-  builtInBlr: "બેંગલુરુમાં 💜 સાથે નિર્મિત"
+  builtInBlr: "બેંગલુરુમાં 💜 સાથે નિર્મિત",
+  copyrightText: "© 2026 હાત્ઝા ઈન્ડિયા પ્રાઈવેટ લિમિટેડ. સર્વાધિકાર સુરક્ષિત."
 };
 
 const pa: Translations = {
-  brandName: "Nest Services",
+  brandName: "Haatza Nest Experts",
   brandTagline: "ਭਰੋਸੇਮੰਦ ਲੋਕ। ਖ਼ੁਸ਼ਹਾਲ ਘਰ।",
   selectLanguage: "ਭਾਸ਼ਾ",
   selectLanguageHeader: "ਭਾਸ਼ਾ ਚੁਣੋ / Select Language",
@@ -1627,11 +1637,12 @@ const pa: Translations = {
   backToTop: "ਉੱਪਰ ਜਾਓ ↑",
   freeJoiningPill: "100% ਮੁਫ਼ਤ ਰਜਿਸਟ੍ਰੇਸ਼ਨ • ਕੋਈ ਫੀਸ ਨਹੀਂ",
   verifiedPlatformPill: "ਪ੍ਰਮਾਣਿਤ ਅਤੇ ਸੁਰੱਖਿਅਤ ਪਲੇਟਫਾਰਮ",
-  builtInBlr: "ਬੈਂਗਲੁਰੂ ਵਿੱਚ 💜 ਨਾਲ ਨਿਰਮਿਤ"
+  builtInBlr: "ਬੈਂਗਲੁਰੂ ਵਿੱਚ 💜 ਨਾਲ ਨਿਰਮਿਤ",
+  copyrightText: "© 2026 ਹਾਤਜ਼ਾ ਇੰਡੀਆ ਪ੍ਰਾਈਵੇਟ ਲਿਮਿਟੇਡ। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।",
 };
 
 const or: Translations = {
-  brandName: "Nest Services",
+  brandName: "Haatza Nest Experts",
   brandTagline: "ବିଶ୍ୱସ୍ତ ବ୍ୟକ୍ତି। ଖୁସିର ଘର।",
   selectLanguage: "ଭାଷା",
   selectLanguageHeader: "ଭାଷା ବାଛନ୍ତୁ / Select Language",
@@ -1771,11 +1782,12 @@ const or: Translations = {
   backToTop: "ଉପରକୁ ଯାଆନ୍ତୁ ↑",
   freeJoiningPill: "୧୦୦% ମାଗଣା ପଞ୍ଜୀକରଣ • କୌଣସି ଫି ନାହିଁ",
   verifiedPlatformPill: "ଯାଞ୍ଚ ହୋଇଥିବା ଓ ସୁରକ୍ଷିତ ପ୍ଲାଟଫର୍ମ",
-  builtInBlr: "ବେଙ୍ଗାଲୁରୁରେ 💜 ସହିତ ନିର୍ମିତ"
+  builtInBlr: "ବେଙ୍ଗାଲୁରୁରେ 💜 ସହିତ ନିର୍ମିତ",
+  copyrightText: "© 2026 ହାତଜା ଇଣ୍ଡିଆ ପ୍ରାଇଭେଟ୍ ଲିମିଟେଡ୍. ସର୍ବସ୍ୱତ୍ୱ ସଂରକ୍ଷିତ।"
 };
 
 const as: Translations = {
-  brandName: "Nest Services",
+  brandName: "Haatza Nest Experts",
   brandTagline: "বিশ্বস্ত মানুহ। সুখী ঘৰ।",
   selectLanguage: "ভাষা",
   selectLanguageHeader: "ভাষা বাছক / Select Language",
@@ -1915,7 +1927,8 @@ const as: Translations = {
   backToTop: "ওপৰলৈ যাওক ↑",
   freeJoiningPill: "১০০% বিনামূলীয়া যোগদান • কোনো মাচুল নাই",
   verifiedPlatformPill: "পৰীক্ষিত আৰু সুৰক্ষিত মঞ্চ",
-  builtInBlr: "বেংগালুৰুত 💜 ৰে নিৰ্মিত"
+  builtInBlr: "বেংগালুৰুত 💜 ৰে নিৰ্মিত",
+  copyrightText: "© 2026 হাতজা ইণ্ডিয়া প্ৰাইভেট লিমিটেড। সৰ্বস্বত্ব সংৰক্ষিত।"
 };
 
 export const translations: Record<Language, Translations> = {
